@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="YerYok.Mobile.Views.LoginPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:templates="clr-namespace:YerYok.Mobile.Views.Templates"
+    NavigationPage.HasNavigationBar="False"
+    mc:Ignorable="d">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <templates:HeaderLine Grid.Row="0" Grid.Column="0" />
+
+            <Image
+                Grid.Row="1"
+                Grid.Column="0"
+                Margin="20,10,20,10"
+                HorizontalOptions="Start"
+                Source="ic_back">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer x:Name="BuBack" Tapped="BuBack_Tapped" />
+                </Image.GestureRecognizers>
+            </Image>
+            <Grid
+                Grid.Row="2"
+                Grid.Column="0"
+                Margin="0,20,0,0"
+                HorizontalOptions="FillAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Label
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    FontSize="42"
+                    HorizontalOptions="Center"
+                    Text="Hoş Geldiniz!"
+                    TextColor="{StaticResource PurplishPurple}" />
+                <Grid Grid.Row="1" Grid.Column="0" />
+                <Button
+                    Grid.Row="2"
+                    Grid.Column="0"
+                    Margin="20,0,20,0"
+                    BackgroundColor="{StaticResource FacebookBlue}"
+                    CornerRadius="5"
+                    HorizontalOptions="FillAndExpand"
+                    ImageSource="ic_facebook"
+                    Text="Facebook ile giriş yap"
+                    TextColor="White" />
+                <StackLayout
+                    Grid.Row="3"
+                    Grid.Column="0"
+                    Margin="20,0,20,0"
+                    HorizontalOptions="FillAndExpand"
+                    Orientation="Horizontal"
+                    Spacing="0"
+                    VerticalOptions="End">
+                    <BoxView
+                        Margin="0,0,20,0"
+                        HeightRequest="2"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="Center"
+                        Color="{StaticResource LineGray}" />
+                    <Label
+                        HorizontalOptions="Center"
+                        Text="Veya"
+                        TextColor="Black"
+                        VerticalOptions="Center"
+                        VerticalTextAlignment="Center" />
+                    <BoxView
+                        Margin="20,0,0,0"
+                        HeightRequest="2"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="Center"
+                        Color="{StaticResource LineGray}" />
+                </StackLayout>
+                <Entry
+                    x:Name="TBEmail"
+                    Grid.Row="4"
+                    Grid.Column="0"
+                    Margin="20,20,20,0"
+                    HorizontalOptions="FillAndExpand"
+                    Keyboard="Email"
+                    Placeholder="E-posta,Kullanıcı Adı"
+                    ReturnType="Next"
+                    Style="{StaticResource StandartEntry}"
+                    TextColor="Black" />
+                <Entry
+                    x:Name="TBPassword"
+                    Grid.Row="5"
+                    Grid.Column="0"
+                    Margin="20,20,20,0"
+                    HorizontalOptions="FillAndExpand"
+                    Keyboard="Text"
+                    Placeholder="Şifre"
+                    ReturnType="Done"
+                    Style="{StaticResource StandartEntry}"
+                    TextColor="Black" />
+                <Button
+                    x:Name="BuLogin"
+                    Grid.Row="6"
+                    Grid.Column="0"
+                    Margin="20,10,20,0"
+                    BackgroundColor="{StaticResource PurplishPurple}"
+                    Clicked="BuLogin_Clicked"
+                    CornerRadius="5"
+                    FontFamily="{StaticResource FontRegularSF}"
+                    HorizontalOptions="FillAndExpand"
+                    Text="GİRİŞ YAP"
+                    TextColor="White"
+                    VerticalOptions="CenterAndExpand" />
+                <Label
+                    Grid.Row="7"
+                    Grid.Column="0"
+                    Margin="30,0,30,0"
+                    FontAttributes="Bold"
+                    HorizontalOptions="Center"
+                    Text="Şifremi Hatırlat!"
+                    TextDecorations="Underline"
+                    VerticalOptions="Center"
+                    VerticalTextAlignment="Center">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="buPassword" Tapped="buPassword_Tapped" />
+                    </Label.GestureRecognizers>
+                </Label>
+                <Label
+                    Grid.Row="8"
+                    Grid.Column="0"
+                    Margin="30,0,30,10"
+                    HorizontalTextAlignment="Center"
+                    Text="Yer Yok uygulamasını kullandığında Gizlilik Politikası ve Hizmet Koşullarını kabul etmiş oluyorsun."
+                    VerticalOptions="End"
+                    VerticalTextAlignment="Center" />
+
+            </Grid>
+            <templates:HeaderLine Grid.Row="3" Grid.Column="0" />
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Grid
+    x:Class="YerYok.Mobile.Views.Templates.MainNavigationBar"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:templates="clr-namespace:YerYok.Mobile.Views.Templates"
+    BackgroundColor="#efefef"
+    ColumnSpacing="0"
+    RowSpacing="0"
+    VerticalOptions="Center"
+    mc:Ignorable="d">
+    <Grid.Margin>
+        <OnPlatform x:TypeArguments="Thickness">
+            <On Platform="iOS" Value="0,15,0,0" />
+            <On Platform="Android, WinPhone, Windows" Value="0,0,0,0" />
+        </OnPlatform>
+    </Grid.Margin>
+
+    <Grid.RowDefinitions>
+        <RowDefinition Height="{StaticResource ToolbarHeight}" />
+        <RowDefinition Height="Auto" />
+    </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*" />
+        <ColumnDefinition Width="Auto" />
+        <ColumnDefinition Width="*" />
+    </Grid.ColumnDefinitions>
+    <Image
+        Grid.Row="0"
+        Grid.Column="0"
+        Aspect="AspectFit"
+        HorizontalOptions="Start"
+        Source="ic_category"
+        VerticalOptions="Center">
+        <Image.Margin>
+            <OnPlatform x:TypeArguments="Thickness">
+                <On Platform="iOS" Value="10,20,10,10" />
+                <On Platform="Android, WinPhone, Windows" Value="10,10,10,10" />
+            </OnPlatform>
+        </Image.Margin>
+        <Image.GestureRecognizers>
+            <TapGestureRecognizer
+                x:Name="BuCategories"
+                NumberOfTapsRequired="1"
+                Tapped="BuCategories_Tapped" />
+        </Image.GestureRecognizers>
+    </Image>
+    <Image
+        Grid.Row="0"
+        Grid.Column="1"
+        Margin="5"
+        Aspect="AspectFit"
+        HorizontalOptions="Center"
+        Source="ic_applogo"
+        VerticalOptions="Center">
+        <Image.Margin>
+            <OnPlatform x:TypeArguments="Thickness">
+                <On Platform="iOS" Value="5,10,5,5" />
+                <On Platform="Android, WinPhone, Windows" Value="5,5,5,5" />
+            </OnPlatform>
+        </Image.Margin>
+    </Image>
+    <Image
+        Grid.Row="0"
+        Grid.Column="2"
+        Margin="5"
+        Aspect="AspectFit"
+        HorizontalOptions="End"
+        Source="ic_searchbutton"
+        VerticalOptions="Center">
+        <Image.Margin>
+            <OnPlatform x:TypeArguments="Thickness">
+                <On Platform="iOS" Value="10,20,10,10" />
+                <On Platform="Android, WinPhone, Windows" Value="10,10,10,10" />
+            </OnPlatform>
+        </Image.Margin>
+        <Image.GestureRecognizers>
+            <TapGestureRecognizer
+                x:Name="buSearchButton"
+                NumberOfTapsRequired="1"
+                Tapped="buSearchButton_Tapped" />
+        </Image.GestureRecognizers>
+    </Image>
+    <templates:HeaderLine2 Grid.Row="1" Grid.ColumnSpan="3" />
+</Grid>

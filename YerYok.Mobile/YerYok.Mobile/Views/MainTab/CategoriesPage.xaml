@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="YerYok.Mobile.Views.CategoriesPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:templates="clr-namespace:YerYok.Mobile.Views.Templates"
+    NavigationPage.HasNavigationBar="False"
+    mc:Ignorable="d">
+    <ContentPage.Content>
+        <Grid RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <templates:HeaderNavigationBar
+                Grid.Row="0"
+                Grid.Column="0"
+                IsBack="True"
+                NewTitle="Kategoriler" />
+            <ListView
+                x:Name="LvCategories"
+                Grid.Row="1"
+                Grid.Column="0"
+                HasUnevenRows="True"
+                ItemSelected="LvCategories_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid
+                                HeightRequest="60"
+                                HorizontalOptions="FillAndExpand"
+                                VerticalOptions="FillAndExpand">
+                                <Grid
+                                    BackgroundColor="#efefef"
+                                    HorizontalOptions="FillAndExpand"
+                                    VerticalOptions="FillAndExpand">
+                                    <Label
+                                        FontFamily="{StaticResource FontBold}"
+                                        FontSize="28"
+                                        HorizontalOptions="Center"
+                                        HorizontalTextAlignment="Center"
+                                        Text="{Binding CategoryName}"
+                                        TextColor="{StaticResource PurpleBrown}"
+                                        VerticalOptions="Center"
+                                        VerticalTextAlignment="Center" />
+                                </Grid>
+                                <Grid
+                                    BackgroundColor="White"
+                                    HorizontalOptions="FillAndExpand"
+                                    IsVisible="{Binding IsType}"
+                                    VerticalOptions="FillAndExpand">
+                                    <Label
+                                        FontFamily="{StaticResource FontBold}"
+                                        FontSize="28"
+                                        HorizontalOptions="Center"
+                                        HorizontalTextAlignment="Center"
+                                        Text="{Binding CategoryName}"
+                                        TextColor="{StaticResource PurpleBrownO}"
+                                        VerticalOptions="Center"
+                                        VerticalTextAlignment="Center" />
+                                </Grid>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="YerYok.Mobile.Views.MasterMainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:maintab="clr-namespace:YerYok.Mobile.Views.MainTab"
+    xmlns:maintab2="clr-namespace:YerYok.Mobile.Views.FavoriTab"
+    xmlns:maintab3="clr-namespace:YerYok.Mobile.Views.NotificationTab"
+    xmlns:maintab4="clr-namespace:YerYok.Mobile.Views.AccountTab"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:tabs="clr-namespace:Sharpnado.Presentation.Forms.CustomViews.Tabs;assembly=Sharpnado.Presentation.Forms"
+    xmlns:templates="clr-namespace:YerYok.Mobile.Views.Templates"
+    BackgroundColor="#efefef"
+    NavigationPage.HasNavigationBar="False"
+    mc:Ignorable="d">
+    <ContentPage.Content>
+        <Grid ColumnSpacing="0" RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="{StaticResource ToolbarHeight}" />
+                <RowDefinition Height="*" />
+                <RowDefinition x:Name="BottomBarRowDefinition" Height="{StaticResource BottomBarHeight}" />
+                <RowDefinition x:Name="BottomSafeAreaDefinition" Height="{DynamicResource BottomSafeArea}" />
+            </Grid.RowDefinitions>
+            <templates:MainNavigationBar x:Name="MNavBar" Grid.Row="0" />
+            <templates:HeaderNavigationBar
+                x:Name="HNavBar"
+                Grid.Row="0"
+                IsBack="False" />
+            <tabs:ViewSwitcher
+                x:Name="Switcher"
+                Grid.Row="1"
+                Animate="False"
+                SelectedIndex="{Binding SelectedViewModelIndex, Mode=TwoWay}">
+                <maintab:MainPage />
+                <maintab2:FavoritePage />
+                <maintab3:NotificationPage />
+                <maintab4:AccountPage />
+            </tabs:ViewSwitcher>
+            <tabs:TabHostView
+                x:Name="TabHost"
+                Grid.Row="2"
+                BackgroundColor="White"
+                SelectedIndex="{Binding Source={x:Reference Switcher}, Path=SelectedIndex, Mode=TwoWay}"
+                ShadowType="None"
+                TabType="Fixed">
+                <tabs:TabHostView.Tabs>
+                    <tabs:BottomTabItem
+                        IconImageSource="ic_home"
+                        SelectedTabColor="{StaticResource PurplishPink}"
+                        UnselectedIconColor="Gray" />
+                    <tabs:BottomTabItem
+                        IconImageSource="ic_favori"
+                        SelectedTabColor="{StaticResource PurplishPink}"
+                        UnselectedIconColor="Gray" />
+                    <tabs:TabButton
+                        x:Name="TabButton"
+                        ButtonBackgroundColor="White"
+                        ButtonCircleSize="60"
+                        ButtonPadding="15"
+                        Clicked="TabButton_Clicked"
+                        IconImageSource="ic_add"
+                        IsVisible="True"
+                        Scale="1.4"
+                        TranslationY="-10" />
+                    <tabs:BottomTabItem
+                        IconImageSource="ic_notification"
+                        SelectedTabColor="{StaticResource PurplishPink}"
+                        UnselectedIconColor="Gray" />
+                    <tabs:BottomTabItem
+                        IconImageSource="ic_account"
+                        SelectedTabColor="{StaticResource PurplishPink}"
+                        UnselectedIconColor="Gray" />
+                </tabs:TabHostView.Tabs>
+            </tabs:TabHostView>
+            <BoxView Grid.Row="3" BackgroundColor="{Binding Source={x:Reference TabHost}, Path=BackgroundColor}" />
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

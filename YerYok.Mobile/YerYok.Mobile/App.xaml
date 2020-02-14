@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application
+    x:Class="YerYok.Mobile.App"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:tabs="clr-namespace:Sharpnado.Presentation.Forms.CustomViews.Tabs;assembly=Sharpnado.Presentation.Forms"
+    mc:Ignorable="d">
+    <Application.Resources>
+
+        <Color x:Key="PurplishPink">#cb659c</Color>
+        <Color x:Key="PurplishPurple">#a5495c</Color>
+        <Color x:Key="FacebookBlue">#3b5998</Color>
+        <Color x:Key="LineGray">#dfdfdf</Color>
+        <Color x:Key="ButtonDeactiveGray">#efefef</Color>
+        <Color x:Key="CheckBoxGray">#bdbdbd</Color>
+        <Color x:Key="WhiteGray">#d8d8d8</Color>
+        <Color x:Key="ProfileText">#505050</Color>
+        <Color x:Key="PointText">#8b8a8a</Color>
+        <Color x:Key="PurpleBrown">#4d2d3c</Color>
+        <Color x:Key="PurpleBrownO">#a5495c</Color>
+        <Color x:Key="White">#ffffff</Color>
+        <Color x:Key="OverlayColor">#BF040404</Color>
+        <Color x:Key="IndicatorColor">#FF0fafa9</Color>
+        <Color x:Key="OnlineColor">#7bb549</Color>
+
+        <Color x:Key="EntryTextColor">#000000</Color>
+        <Color x:Key="EntryBorderColor">#E0E0E0</Color>
+
+        <OnPlatform x:Key="FontBold" x:TypeArguments="x:String">
+            <On Platform="Android" Value="Bodoni_SvtyTwo_ITC_TT_Bold.ttf#Bodoni SvtyTwo ITC TT" />
+            <On Platform="iOS" Value="BodoniSvtyTwoOSITCTT-Bold" />
+        </OnPlatform>
+        <OnPlatform x:Key="FontBook" x:TypeArguments="x:String">
+            <On Platform="Android" Value="Bodoni_SvtyTwo_ITC_TT_Book.ttf#Bodoni SvtyTwo ITC TT" />
+            <On Platform="iOS" Value="BodoniSvtyTwoOSITCTT-Book" />
+        </OnPlatform>
+
+        <OnPlatform x:Key="FontBoldSF" x:TypeArguments="x:String">
+            <On Platform="Android" Value="SFProDisplay_Bold.ttf#SF Pro Display" />
+            <On Platform="iOS" Value="SFProDisplay-Bold" />
+        </OnPlatform>
+        <OnPlatform x:Key="FontRegularSF" x:TypeArguments="x:String">
+            <On Platform="Android" Value="SFProDisplay_Regular.ttf#SF Pro Display" />
+            <On Platform="iOS" Value="SFProDisplay-Regular" />
+        </OnPlatform>
+
+        <Style x:Key="StandartEntryForInsta" TargetType="Entry">
+            <Setter Property="Margin" Value="30,10,30,0" />
+            <Setter Property="HeightRequest" Value="50" />
+            <Setter Property="TextColor" Value="{StaticResource EntryTextColor}" />
+            <Setter Property="BackgroundColor" Value="Transparent" />
+            <Setter Property="PlaceholderColor" Value="#BDBDBD" />
+            <Setter Property="FontFamily" Value="{StaticResource FontRegularSF}" />
+            <Setter Property="FontSize" Value="16" />
+        </Style>
+
+        <Style x:Key="StandartEntry" TargetType="Entry">
+            <Setter Property="VerticalTextAlignment" Value="Center" />
+            <Setter Property="HorizontalTextAlignment" Value="Center" />
+            <Setter Property="HeightRequest" Value="50" />
+            <Setter Property="TextColor" Value="Black" />
+            <Setter Property="BackgroundColor" Value="Transparent" />
+            <Setter Property="PlaceholderColor" Value="#BDBDBD" />
+            <Setter Property="FontSize" Value="16" />
+        </Style>
+
+        <OnPlatform x:Key="ToolbarHeight" x:TypeArguments="GridLength">
+            <On Platform="iOS">80</On>
+            <On Platform="Android">60</On>
+        </OnPlatform>
+
+        <Thickness
+            x:Key="StatusBarHeightPadding"
+            Bottom="0"
+            Left="0"
+            Right="0">
+            <Thickness.Top>
+                <OnPlatform x:TypeArguments="x:Double">
+                    <On Platform="iOS">20</On>
+                    <On Platform="Android">0</On>
+                </OnPlatform>
+            </Thickness.Top>
+        </Thickness>
+
+        <OnPlatform x:Key="BottomBarHeight" x:TypeArguments="GridLength">
+            <On Platform="iOS">65</On>
+            <On Platform="Android">65</On>
+        </OnPlatform>
+        <Style x:Key="BottomTabStyle" TargetType="tabs:BottomTabItem">
+            <Setter Property="SelectedTabColor" Value="{StaticResource PurplishPurple}" />
+            <Setter Property="UnselectedLabelColor" Value="Gray" />
+            <Setter Property="UnselectedIconColor" Value="LightGray" />
+            <Setter Property="FontFamily" Value="{StaticResource FontBook}" />
+            <Setter Property="LabelSize" Value="14" />
+            <Setter Property="IconSize" Value="28" />
+            <Setter Property="IsTextVisible" Value="False" />
+        </Style>
+        <!--<GridLength x:Key="HeaderHeight">40</GridLength>-->
+    </Application.Resources>
+</Application>

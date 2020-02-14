@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="YerYok.Mobile.Views.CategorySelectionPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:templates="clr-namespace:YerYok.Mobile.Views.Templates"
+    NavigationPage.HasNavigationBar="False"
+    mc:Ignorable="d">
+    <ContentPage.Content>
+        <Grid RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid
+                Grid.Row="0"
+                Grid.Column="0"
+                BackgroundColor="{StaticResource ButtonDeactiveGray}"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Label
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Margin="20,30,0,20"
+                    FontSize="18"
+                    HorizontalOptions="FillAndExpand"
+                    HorizontalTextAlignment="Start"
+                    Text="Kapat"
+                    TextColor="{StaticResource PurpleBrownO}"
+                    VerticalOptions="FillAndExpand"
+                    VerticalTextAlignment="Center">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="cancel" Tapped="cancel_Tapped" />
+                    </Label.GestureRecognizers>
+                </Label>
+            </Grid>
+            <templates:HeaderLine2
+                Grid.Row="1"
+                Grid.Column="0"
+                RowSpacing="0" />
+            <Grid
+                Grid.Row="2"
+                Grid.Column="0"
+                BackgroundColor="White"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+
+                </Grid.RowDefinitions>
+                <Label
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Margin="20,20,20,0"
+                    BackgroundColor="White"
+                    FontSize="24"
+                    HorizontalOptions="FillAndExpand"
+                    HorizontalTextAlignment="Start"
+                    Text="Yemek Tabağı"
+                    TextColor="Black"
+                    VerticalOptions="FillAndExpand"
+                    VerticalTextAlignment="Center" />
+                <Label
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    Margin="20,20,20,0"
+                    BackgroundColor="White"
+                    FontSize="24"
+                    HorizontalOptions="Start"
+                    HorizontalTextAlignment="Center"
+                    Text="Servis Tabağı"
+                    TextColor="Black"
+                    VerticalOptions="FillAndExpand"
+                    VerticalTextAlignment="Center" />
+                <Label
+                    Grid.Row="2"
+                    Grid.Column="0"
+                    Margin="20,20,20,0"
+                    BackgroundColor="White"
+                    FontSize="24"
+                    HorizontalOptions="Start"
+                    HorizontalTextAlignment="Center"
+                    Text="Pasta Tabağı"
+                    TextColor="Black"
+                    VerticalOptions="FillAndExpand"
+                    VerticalTextAlignment="Center" />
+                <Label
+                    Grid.Row="3"
+                    Grid.Column="0"
+                    Margin="20,20,20,0"
+                    BackgroundColor="White"
+                    FontSize="24"
+                    HorizontalOptions="Start"
+                    HorizontalTextAlignment="Center"
+                    Text="Kupa"
+                    TextColor="Black"
+                    VerticalOptions="FillAndExpand"
+                    VerticalTextAlignment="Center" />
+                <Label
+                    Grid.Row="4"
+                    Grid.Column="0"
+                    Margin="20,20,20,0"
+                    BackgroundColor="White"
+                    FontSize="24"
+                    HorizontalOptions="Start"
+                    HorizontalTextAlignment="Center"
+                    Text="Çay Fincanı"
+                    TextColor="Black"
+                    VerticalOptions="FillAndExpand"
+                    VerticalTextAlignment="Center" />
+                <Label
+                    Grid.Row="5"
+                    Grid.Column="0"
+                    Margin="20,20,20,0"
+                    BackgroundColor="White"
+                    FontSize="24"
+                    HorizontalOptions="Start"
+                    HorizontalTextAlignment="Center"
+                    Text="Kahve Fincanı"
+                    TextColor="Black"
+                    VerticalOptions="FillAndExpand"
+                    VerticalTextAlignment="Center" />
+                <Label
+                    Grid.Row="6"
+                    Grid.Column="0"
+                    Margin="20,20,20,0"
+                    BackgroundColor="White"
+                    FontSize="24"
+                    HorizontalOptions="Start"
+                    HorizontalTextAlignment="Center"
+                    Text="Kayık Tabak"
+                    TextColor="Black"
+                    VerticalOptions="FillAndExpand"
+                    VerticalTextAlignment="Center" />
+                <Label
+                    Grid.Row="7"
+                    Grid.Column="0"
+                    Margin="20,20,20,0"
+                    BackgroundColor="White"
+                    FontSize="24"
+                    HorizontalOptions="Start"
+                    HorizontalTextAlignment="Center"
+                    Text="Çorbalık"
+                    TextColor="Black"
+                    VerticalOptions="FillAndExpand"
+                    VerticalTextAlignment="Center" />
+
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

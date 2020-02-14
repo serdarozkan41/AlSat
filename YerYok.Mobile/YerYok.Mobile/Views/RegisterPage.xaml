@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="YerYok.Mobile.Views.RegisterPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:templates="clr-namespace:YerYok.Mobile.Views.Templates"
+    mc:Ignorable="d">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <templates:HeaderLine Grid.Row="0" Grid.Column="0" />            
+            <Image
+                Grid.Row="1"
+                Grid.Column="0"
+                Margin="20,10,20,10"
+                HorizontalOptions="Start"
+                Source="ic_back" />
+            <Grid
+                Grid.Row="2"
+                Grid.Column="0"
+                Margin="0,20,0,0"
+                HorizontalOptions="FillAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Label
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    FontSize="42"
+                    HorizontalOptions="Center"
+                    Text="Kayıt Ol"
+                    TextColor="{StaticResource PurplishPurple}" />
+                <Grid Grid.Row="1" Grid.Column="0" />
+                <Button
+                    Grid.Row="2"
+                    Grid.Column="0"
+                    Margin="20,0,20,0"
+                    BackgroundColor="{StaticResource FacebookBlue}"
+                    CornerRadius="5"
+                    HorizontalOptions="FillAndExpand"
+                    ImageSource="ic_facebook"
+                    Text="Facebook ile giriş yap"
+                    TextColor="White" />
+
+                <StackLayout
+                    Grid.Row="3"
+                    Grid.Column="0"
+                    Margin="20,10,20,0"
+                    HorizontalOptions="FillAndExpand"
+                    Orientation="Horizontal"
+                    Spacing="0"
+                    VerticalOptions="End">
+                    <BoxView
+                        Margin="0,0,20,0"
+                        HeightRequest="2"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="Center"
+                        Color="{StaticResource LineGray}" />
+                    <Label
+                        HorizontalOptions="Center"
+                        Text="Veya"
+                        TextColor="Black"
+                        VerticalOptions="Center"
+                        VerticalTextAlignment="Center" />
+                    <BoxView
+                        Margin="20,0,0,0"
+                        HeightRequest="2"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="Center"
+                        Color="{StaticResource LineGray}" />
+                </StackLayout>
+
+                <Entry
+                    Grid.Row="4"
+                    Grid.Column="0"
+                    Margin="20,20,20,0"
+                    HorizontalOptions="FillAndExpand"
+                    IsReadOnly="True"
+                    Keyboard="Email"
+                    Placeholder="E-posta"
+                    ReturnType="Done"
+                    Style="{StaticResource StandartEntry}"
+                    TextColor="Black" />
+
+            </Grid>
+            <Label
+                Grid.Row="3"
+                Grid.Column="0"
+                Margin="30,0,30,10"
+                HorizontalTextAlignment="Center"
+                Text="Yer Yok uygulamasını kullandığında Gizlilik Politikası ve Hizmet Koşullarını kabul etmiş oluyorsun."
+                VerticalOptions="End"
+                VerticalTextAlignment="Center" />
+            <templates:HeaderLine Grid.Row="4" Grid.Column="0" />
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

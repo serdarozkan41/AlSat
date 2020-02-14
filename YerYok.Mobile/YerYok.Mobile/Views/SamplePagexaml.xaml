@@ -1,0 +1,575 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="YerYok.Mobile.Views.SamplePagexaml"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:templates="clr-namespace:YerYok.Mobile.Views.Templates"
+    BackgroundColor="White"
+    NavigationPage.HasNavigationBar="False"
+    mc:Ignorable="d">
+    <ContentPage.Content>
+        <Grid>
+            <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <ScrollView>
+                    <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <Grid
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            HeightRequest="250">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <Grid Grid.Row="0" Grid.Column="0">
+                                <Image
+                                    Grid.Row="0"
+                                    Grid.Column="0"
+                                    Margin="20,20,0,0"
+                                    HorizontalOptions="StartAndExpand"
+                                    Source="ic_back"
+                                    VerticalOptions="Center" />
+                                <Image
+                                    Grid.Row="1"
+                                    Grid.Column="1"
+                                    Margin="0,0,0,0"
+                                    HorizontalOptions="CenterAndExpand"
+                                    Source="ic_emptyheart"
+                                    VerticalOptions="Center" />
+
+                            </Grid>
+                        </Grid>
+                        <Grid
+                            Grid.Row="1"
+                            Grid.Column="0"
+                            Margin="0,10,0,10"
+                            BackgroundColor="Black"
+                            HeightRequest="80">
+                            <Frame
+                                Margin="-50,0,10,0"
+                                Padding="0"
+                                BackgroundColor="{StaticResource PurpleBrownO}"
+                                CornerRadius="75"
+                                HasShadow="False"
+                                HeightRequest="70"
+                                HorizontalOptions="FillAndExpand">
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer x:Name="BuTeklif" Tapped="BuTeklif_Tapped" />
+                                </Frame.GestureRecognizers>
+                                <Grid RowSpacing="0" VerticalOptions="Center">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+
+                                    <Label
+                                        Grid.Row="0"
+                                        Margin="0,0,45,0"
+                                        FontSize="16"
+                                        HorizontalOptions="End"
+                                        HorizontalTextAlignment="End"
+                                        Text="TEKLİF VER"
+                                        TextColor="White"
+                                        VerticalOptions="Center"
+                                        VerticalTextAlignment="Center" />
+                                    <Label
+                                        Grid.Row="1"
+                                        Margin="0,0,20,0"
+                                        FontSize="13"
+                                        HorizontalOptions="End"
+                                        HorizontalTextAlignment="End"
+                                        Text="133 kişi teklif verdi"
+                                        TextColor="White"
+                                        VerticalOptions="Center"
+                                        VerticalTextAlignment="Center" />
+                                </Grid>
+                            </Frame>
+                            <Frame
+                                Margin="-50,0,150,0"
+                                Padding="0"
+                                BackgroundColor="#F3F3F3"
+                                CornerRadius="75"
+                                HasShadow="False"
+                                HeightRequest="70"
+                                HorizontalOptions="FillAndExpand">
+                                <Grid RowSpacing="0" VerticalOptions="Center">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="Auto" />
+                                    </Grid.ColumnDefinitions>
+                                    <Image
+                                        Grid.Row="0"
+                                        Grid.RowSpan="2"
+                                        Grid.Column="0"
+                                        Margin="60,0,0,0"
+                                        HeightRequest="60"
+                                        HorizontalOptions="CenterAndExpand"
+                                        Source="oval"
+                                        VerticalOptions="CenterAndExpand"
+                                        WidthRequest="60" />
+                                    <Label
+                                        Grid.Row="0"
+                                        Grid.Column="1"
+                                        FontFamily="{StaticResource FontBold}"
+                                        FontSize="18"
+                                        HorizontalOptions="Start"
+                                        HorizontalTextAlignment="Start"
+                                        LineBreakMode="NoWrap"
+                                        Text="Karlien Nijhuis"
+                                        TextColor="{StaticResource PurpleBrownO}"
+                                        VerticalOptions="Center"
+                                        VerticalTextAlignment="Center" />
+                                    <Grid
+                                        Grid.Row="1"
+                                        Grid.Column="1"
+                                        HorizontalOptions="Center"
+                                        RowSpacing="0"
+                                        VerticalOptions="Center">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto" />
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto" />
+                                            <ColumnDefinition Width="Auto" />
+                                            <ColumnDefinition Width="Auto" />
+                                            <ColumnDefinition Width="Auto" />
+                                            <ColumnDefinition Width="Auto" />
+                                            <ColumnDefinition Width="Auto" />
+                                        </Grid.ColumnDefinitions>
+                                        <Image
+                                            Grid.Row="0"
+                                            Grid.Column="0"
+                                            Margin="0,0,0,0"
+                                            HeightRequest="14"
+                                            HorizontalOptions="Start"
+                                            Source="ic_favorite"
+                                            VerticalOptions="Start" />
+                                        <Image
+                                            Grid.Row="0"
+                                            Grid.Column="1"
+                                            Margin="0,0,0,0"
+                                            HeightRequest="14"
+                                            HorizontalOptions="Start"
+                                            Source="ic_favorite"
+                                            VerticalOptions="Start" />
+                                        <Image
+                                            Grid.Row="0"
+                                            Grid.Column="2"
+                                            Margin="0,0,0,0"
+                                            HeightRequest="14"
+                                            HorizontalOptions="Start"
+                                            Source="ic_favorite"
+                                            VerticalOptions="Start" />
+                                        <Image
+                                            Grid.Row="0"
+                                            Grid.Column="3"
+                                            Margin="0,0,0,0"
+                                            HeightRequest="14"
+                                            HorizontalOptions="Start"
+                                            Source="ic_notfavorite"
+                                            VerticalOptions="Start" />
+                                        <Image
+                                            Grid.Row="0"
+                                            Grid.Column="4"
+                                            Margin="0,0,0,0"
+                                            HeightRequest="14"
+                                            HorizontalOptions="Start"
+                                            Source="ic_notfavorite"
+                                            VerticalOptions="Start" />
+                                        <Label
+                                            Grid.Row="0"
+                                            Grid.Column="5"
+                                            Margin="0,0,0,0"
+                                            FontSize="16"
+                                            HorizontalOptions="Start"
+                                            Text="(342)"
+                                            VerticalOptions="Center" />
+                                    </Grid>
+                                </Grid>
+                            </Frame>
+                        </Grid>
+                        <Grid
+                            Grid.Row="2"
+                            Grid.Column="0"
+                            VerticalOptions="Start">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                            <Label
+                                Grid.Row="0"
+                                Grid.Column="0"
+                                Margin="20,10,0,0"
+                                FontFamily="{StaticResource FontBook}"
+                                FontSize="28"
+                                Text="Porland Yemek Tabağı"
+                                TextColor="{StaticResource PurpleBrown}" />
+                            <Label
+                                Grid.Row="1"
+                                Grid.Column="0"
+                                Margin="20,10,20,0"
+                                FontFamily="{StaticResource FontRegularSF}"
+                                FontSize="14"
+                                Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam iaculis aliquam elit sit amet cursus. Integer imperdiet magna non ipsum placerat porta."
+                                TextColor="{StaticResource PointText}" />
+                            <Grid
+                                Grid.Row="2"
+                                Grid.Column="0"
+                                Margin="20,0,20,0"
+                                ColumnSpacing="0"
+                                RowSpacing="0"
+                                VerticalOptions="Start">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+                                <Frame
+                                    Grid.Row="0"
+                                    Grid.Column="0"
+                                    Margin="0,10,0,0"
+                                    Padding="10,5,10,5"
+                                    BackgroundColor="Transparent"
+                                    BorderColor="{StaticResource LineGray}"
+                                    CornerRadius="75"
+                                    HasShadow="False"
+                                    HeightRequest="20"
+                                    HorizontalOptions="Center"
+                                    VerticalOptions="Center">
+                                    <Label
+                                        FontFamily="FontBook"
+                                        FontSize="14"
+                                        LineBreakMode="NoWrap"
+                                        Text="YEMEK TABAĞI" />
+                                </Frame>
+                                <Frame
+                                    Grid.Row="0"
+                                    Grid.Column="1"
+                                    Margin="0,10,0,0"
+                                    Padding="10,5,10,5"
+                                    BackgroundColor="Transparent"
+                                    BorderColor="{StaticResource LineGray}"
+                                    CornerRadius="75"
+                                    HasShadow="False"
+                                    HeightRequest="20"
+                                    HorizontalOptions="Center"
+                                    VerticalOptions="Center">
+                                    <Label
+                                        FontFamily="FontBook"
+                                        FontSize="14"
+                                        LineBreakMode="NoWrap"
+                                        Text="PORLAND" />
+                                </Frame>
+                                <Frame
+                                    Grid.Row="0"
+                                    Grid.Column="2"
+                                    Margin="0,10,0,0"
+                                    Padding="10,5,10,5"
+                                    BackgroundColor="Transparent"
+                                    BorderColor="{StaticResource LineGray}"
+                                    CornerRadius="75"
+                                    HasShadow="False"
+                                    HeightRequest="20"
+                                    HorizontalOptions="Center"
+                                    VerticalOptions="Center">
+                                    <Label
+                                        FontFamily="FontBook"
+                                        FontSize="12"
+                                        HorizontalOptions="Center"
+                                        HorizontalTextAlignment="Center"
+                                        LineBreakMode="NoWrap"
+                                        Text="KIRMIZI"
+                                        VerticalOptions="Center"
+                                        VerticalTextAlignment="Center" />
+                                </Frame>
+                                <Frame
+                                    Grid.Row="0"
+                                    Grid.Column="3"
+                                    Margin="0,10,0,0"
+                                    Padding="10,5,10,5"
+                                    BackgroundColor="Transparent"
+                                    BorderColor="{StaticResource LineGray}"
+                                    CornerRadius="75"
+                                    HasShadow="False"
+                                    HeightRequest="20"
+                                    HorizontalOptions="Center"
+                                    VerticalOptions="Center">
+                                    <Label
+                                        FontFamily="FontBook"
+                                        FontSize="14"
+                                        LineBreakMode="NoWrap"
+                                        Text="63 cm" />
+                                </Frame>
+                                <Frame
+                                    Grid.Row="1"
+                                    Grid.Column="0"
+                                    Margin="0,10,0,0"
+                                    Padding="10,5,10,5"
+                                    BackgroundColor="Transparent"
+                                    BorderColor="{StaticResource LineGray}"
+                                    CornerRadius="75"
+                                    HasShadow="False"
+                                    HeightRequest="20"
+                                    HorizontalOptions="Center"
+                                    VerticalOptions="Center">
+                                    <Label
+                                        FontFamily="FontBook"
+                                        FontSize="14"
+                                        LineBreakMode="NoWrap"
+                                        Text="DESENLİ" />
+                                </Frame>
+                                <Frame
+                                    Grid.Row="1"
+                                    Grid.Column="1"
+                                    Margin="0,10,0,0"
+                                    Padding="10,5,10,5"
+                                    BackgroundColor="Transparent"
+                                    BorderColor="{StaticResource LineGray}"
+                                    CornerRadius="75"
+                                    HasShadow="False"
+                                    HeightRequest="20"
+                                    HorizontalOptions="Center"
+                                    VerticalOptions="Center">
+                                    <Label
+                                        FontFamily="FontBook"
+                                        FontSize="14"
+                                        LineBreakMode="NoWrap"
+                                        Text="İSTANBUL-BEŞİKTAŞ" />
+                                </Frame>
+                            </Grid>
+                            <Label
+                                Grid.Row="3"
+                                Grid.Column="0"
+                                Margin="20,10,0,0"
+                                FontFamily="{StaticResource FontRegularSF}"
+                                FontSize="12"
+                                Text="3 GÜNDÜR YAYINDA"
+                                TextColor="{StaticResource PointText}" />
+
+                        </Grid>
+                        <Grid
+                            Grid.Row="3"
+                            Grid.Column="0"
+                            Margin="0,20,0,0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+
+                            <Button
+                                Grid.Row="0"
+                                Grid.Column="1"
+                                Margin="0,10,0,0"
+                                BackgroundColor="{StaticResource ButtonDeactiveGray}"
+                                HorizontalOptions="Center"
+                                ImageSource="ic_truck"
+                                Text="ALıcı Ödemeli Kargo                                                                                    3 iş günü içinde kargolanır."
+                                TextColor="{StaticResource CheckBoxGray}"
+                                VerticalOptions="Start" />
+                            <Image
+                                Grid.Row="0"
+                                Grid.Column="2"
+                                Source="ic_next" />
+                        </Grid>
+
+                        <Grid
+                            Grid.Row="4"
+                            Grid.Column="0"
+                            Margin="0,20,0,0"
+                            BackgroundColor="Accent"
+                            VerticalOptions="FillAndExpand">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <Label
+                                Grid.Row="0"
+                                Grid.Column="0"
+                                Margin="20,0,20,0"
+                                FontFamily="{StaticResource FontBook}"
+                                FontSize="22"
+                                Text="Benzer Ürünler"
+                                TextColor="{StaticResource PurpleBrown}" />
+                            <CollectionView
+                                Grid.Row="1"
+                                Grid.Column="0"
+                                Margin="10,20,10,10"
+                                HorizontalOptions="Center"
+                                ItemsSource="{Binding MyFavorites}"
+                                SelectionMode="None"
+                                VerticalOptions="Center">
+                                <CollectionView.ItemsLayout>
+                                    <GridItemsLayout Orientation="Vertical" Span="2" />
+                                </CollectionView.ItemsLayout>
+                                <CollectionView.ItemTemplate>
+                                    <DataTemplate>
+                                        <Grid
+                                            Padding="5,10,5,10"
+                                            HeightRequest="205"
+                                            WidthRequest="170">
+                                            <!--<Grid.GestureRecognizers>
+                                        <TapGestureRecognizer
+                                            x:Name="BuItemSelect"
+                                            CommandParameter="{Binding .}"
+                                            Tapped="BuItemSelect_Tapped" />
+                                    </Grid.GestureRecognizers>-->
+                                            <Frame
+                                                Margin="0"
+                                                Padding="0"
+                                                BorderColor="{StaticResource LineGray}"
+                                                CornerRadius="10"
+                                                HasShadow="False"
+                                                HeightRequest="170"
+                                                VerticalOptions="Start"
+                                                WidthRequest="170">
+                                                <Grid>
+                                                    <Image
+                                                        Margin="20,10,20,20"
+                                                        BackgroundColor="Transparent"
+                                                        HorizontalOptions="Center"
+                                                        Source="{Binding CoverImg}"
+                                                        VerticalOptions="Start" />
+                                                    <Image
+                                                        Margin="0,15,20,0"
+                                                        BackgroundColor="Transparent"
+                                                        HorizontalOptions="End"
+                                                        IsVisible="{Binding IsFavori}"
+                                                        Source="ic_fullheart"
+                                                        VerticalOptions="Start" />
+                                                </Grid>
+                                            </Frame>
+                                            <Frame
+                                                Margin="10,0,10,0"
+                                                Padding="0"
+                                                BorderColor="#EEEEEE"
+                                                CornerRadius="10"
+                                                HasShadow="False"
+                                                HeightRequest="70"
+                                                VerticalOptions="End"
+                                                WidthRequest="170">
+                                                <Grid>
+                                                    <Grid.RowDefinitions>
+                                                        <RowDefinition Height="*" />
+                                                    </Grid.RowDefinitions>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="*" />
+                                                        <ColumnDefinition Width="*" />
+                                                    </Grid.ColumnDefinitions>
+                                                    <Label
+                                                        Grid.Row="0"
+                                                        Grid.Column="0"
+                                                        Margin="10,0,0,0"
+                                                        FontFamily="{StaticResource FontRegularSF}"
+                                                        FontSize="14"
+                                                        HorizontalOptions="Start"
+                                                        HorizontalTextAlignment="Start"
+                                                        Text="{Binding Name}"
+                                                        TextColor="Black"
+                                                        VerticalOptions="Center" />
+                                                    <Grid
+                                                        Grid.Row="0"
+                                                        Grid.Column="1"
+                                                        Margin="0,0,10,0"
+                                                        HorizontalOptions="End"
+                                                        RowSpacing="0"
+                                                        VerticalOptions="Center">
+                                                        <Grid.RowDefinitions>
+                                                            <RowDefinition Height="Auto" />
+                                                            <RowDefinition Height="Auto" />
+                                                        </Grid.RowDefinitions>
+                                                        <Grid.ColumnDefinitions>
+                                                            <ColumnDefinition Width="*" />
+                                                        </Grid.ColumnDefinitions>
+                                                        <Label
+                                                            Grid.Row="0"
+                                                            Grid.Column="0"
+                                                            FontFamily="{StaticResource FontBold}"
+                                                            FontSize="12"
+                                                            HorizontalOptions="End"
+                                                            HorizontalTextAlignment="End"
+                                                            Text="{Binding OldPrice, StringFormat='₺{0}'}"
+                                                            TextColor="#8b8a8a"
+                                                            TextDecorations="Strikethrough"
+                                                            VerticalOptions="CenterAndExpand"
+                                                            VerticalTextAlignment="Center" />
+                                                        <Label
+                                                            Grid.Row="1"
+                                                            Grid.Column="0"
+                                                            FontFamily="{StaticResource FontBook}"
+                                                            FontSize="22"
+                                                            HorizontalOptions="End"
+                                                            HorizontalTextAlignment="End"
+                                                            Text="{Binding Price, StringFormat='₺{0}'}"
+                                                            TextColor="Black"
+                                                            VerticalOptions="CenterAndExpand"
+                                                            VerticalTextAlignment="Center" />
+                                                    </Grid>
+                                                </Grid>
+                                            </Frame>
+
+
+                                        </Grid>
+                                    </DataTemplate>
+                                </CollectionView.ItemTemplate>
+                            </CollectionView>
+                        </Grid>
+
+                    </Grid>
+                </ScrollView>
+            </Grid>
+            <ContentView
+                BackgroundColor="{StaticResource OverlayColor}"
+                HorizontalOptions="FillAndExpand"
+                IsVisible="{Binding IsBusy}"
+                Opacity="0.75"
+                VerticalOptions="FillAndExpand">
+                <ActivityIndicator
+                    HorizontalOptions="CenterAndExpand"
+                    IsRunning="{Binding IsBusy}"
+                    IsVisible="{Binding IsBusy}"
+                    VerticalOptions="CenterAndExpand"
+                    Color="{StaticResource IndicatorColor}" />
+            </ContentView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

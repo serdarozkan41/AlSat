@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:templates="clr-namespace:YerYok.Mobile.Views.Templates"
+             mc:Ignorable="d"
+             x:Class="YerYok.Mobile.Views.RegisterWithEpostaPage">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <templates:HeaderLine Grid.Row="0" Grid.Column="0" />
+            <Image
+                Grid.Row="1"
+                Grid.Column="0"
+                Margin="20,10,20,10"
+                HorizontalOptions="Start"
+                Source="ic_back"/>
+            <templates:HeaderLine Grid.Row="4" Grid.Column="0" />
+            <Grid
+                Grid.Row="2"
+                Grid.Column="0"
+                Margin="0,20,0,0"
+                HorizontalOptions="FillAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />                    
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Label
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    FontSize="42"
+                    HorizontalOptions="Center"
+                    Text="Kayıt Ol"
+                    TextColor="{StaticResource PurplishPurple}"/>
+                <Entry
+                    Keyboard="Text"
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    Margin="20,20,20,0"
+                    HorizontalOptions="FillAndExpand"
+                    Placeholder="Kullanıcı Adı Belirle"
+                    ReturnType="Next"
+                    Style="{StaticResource StandartEntry}"
+                    TextColor="Black" />
+                <Entry
+                    Keyboard="Text"
+                    Grid.Row="2"
+                    Grid.Column="0"
+                    Margin="20,20,20,0"
+                    HorizontalOptions="FillAndExpand"
+                    Placeholder="Şifre Belirle"
+                    ReturnType="Done"
+                    Style="{StaticResource StandartEntry}"
+                    TextColor="Black" />
+                <Label
+                    Grid.Row="3"
+                    Grid.Column="0"
+                    HorizontalTextAlignment="Center"
+                    Margin="30,0,30,0"
+                    Text="Şifreniz en az 6 karakterden oluşmalıdır" 
+                    FontSize="14"
+                    TextColor="{StaticResource PurplishPurple}"
+                    VerticalOptions="End"
+                    VerticalTextAlignment="Center"/>
+                
+            </Grid>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

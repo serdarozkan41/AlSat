@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:templates="clr-namespace:YerYok.Mobile.Views.Templates"
+             mc:Ignorable="d"
+             x:Class="YerYok.Mobile.Views.ChoosingRecipientProfilePage">
+    <ContentPage.Content>
+        <Grid RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Grid
+                Grid.Row="0"
+                Grid.Column="0"
+                Margin="0,0,0,0"
+                BackgroundColor="{StaticResource ButtonDeactiveGray}"
+                HorizontalOptions="FillAndExpand"
+                RowSpacing="0"
+                VerticalOptions="FillAndExpand">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Image
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Margin="20,10,0,10"
+                    HorizontalOptions="Start"
+                    Source="ic_back"
+                    VerticalOptions="FillAndExpand" />
+                <Label
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    FontAttributes="Bold"
+                    FontSize="20"
+                    HorizontalOptions="StartAndExpand"
+                    HorizontalTextAlignment="Center"
+                    Text="Ürünü Kime Sattınız ?"
+                    TextColor="{StaticResource PurpleBrownO}"
+                    VerticalOptions="FillAndExpand"
+                    VerticalTextAlignment="Center" />                
+                <Grid Grid.Row="0" Grid.Column="2" />
+            </Grid>
+            <templates:HeaderLine2 Grid.Row="1" Grid.Column="0" RowSpacing="0"/>
+            <SearchBar
+                Grid.Row="2"
+                Grid.Column="0"
+                Placeholder="Arama"
+                HorizontalOptions="CenterAndExpand"
+                FontSize="Medium" />
+            <Grid
+                Grid.Row="3"
+                Grid.Column="0"
+                Margin="0,10,0,13"
+                HorizontalOptions="FillAndExpand"
+                RowSpacing="0"
+                VerticalOptions="FillAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />                  
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Image
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Margin="20,10,0,10"
+                        HorizontalOptions="Start"
+                        VerticalOptions="FillAndExpand"
+                        Source="ic_avatar"  />
+                <Label
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    Margin="20,20,0,10"
+                    HorizontalOptions="StartAndExpand"
+                    VerticalOptions="FillAndExpand"
+                    Text="Adaora Azubuike"
+                    TextColor="{StaticResource ProfileText}"
+                    FontSize="16"/>
+                
+                <Grid Grid.Row="0" Grid.Column="2" />
+                
+                <Image
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        Margin="20,10,0,10"
+                        HorizontalOptions="Start"
+                        VerticalOptions="FillAndExpand"
+                        Source="ic_avatar"  />
+                <Label
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Margin="20,20,0,10"
+                    HorizontalOptions="StartAndExpand"
+                    VerticalOptions="FillAndExpand"
+                    Text="Afonso Pinto"
+                    TextColor="{StaticResource ProfileText}"
+                    FontSize="16"/>
+                
+                <Grid Grid.Row="1" Grid.Column="2" />
+                
+                <Image
+                        Grid.Row="2"
+                        Grid.Column="0"
+                        Margin="20,10,0,10"
+                        HorizontalOptions="Start"
+                        VerticalOptions="FillAndExpand"
+                        Source="ic_avatar"  />
+                <Label
+                    Grid.Row="2"
+                    Grid.Column="1"
+                    Margin="20,20,0,10"
+                    HorizontalOptions="StartAndExpand"
+                    VerticalOptions="FillAndExpand"
+                    Text="Izumi Katsuyoshi"
+                    TextColor="{StaticResource ProfileText}"
+                    FontSize="16"/>
+
+                <Grid Grid.Row="2" Grid.Column="2" />
+
+                <Image
+                        Grid.Row="3"
+                        Grid.Column="0"
+                        Margin="20,10,0,10"
+                        HorizontalOptions="Start"
+                        VerticalOptions="FillAndExpand"
+                        Source="ic_avatar"  />
+                <Label
+                    Grid.Row="3"
+                    Grid.Column="1"
+                    Margin="20,20,0,10"
+                    HorizontalOptions="StartAndExpand"
+                    VerticalOptions="FillAndExpand"
+                    Text="Nayara Delafuente"
+                    TextColor="{StaticResource ProfileText}"
+                    FontSize="16"/>
+
+                <Grid Grid.Row="3" Grid.Column="2" />
+
+                <Image
+                        Grid.Row="4"
+                        Grid.Column="0"
+                        Margin="20,10,0,10"
+                        HorizontalOptions="Start"
+                        VerticalOptions="FillAndExpand"
+                        Source="ic_avatar"  />
+                <Label
+                    Grid.Row="4"
+                    Grid.Column="1"
+                    Margin="20,20,0,10"
+                    HorizontalOptions="StartAndExpand"
+                    VerticalOptions="FillAndExpand"
+                    Text="Nembo Lukeni"
+                    TextColor="{StaticResource ProfileText}"
+                    FontSize="16"/>
+
+                <Grid Grid.Row="4" Grid.Column="2" />
+
+                <Image
+                        Grid.Row="5"
+                        Grid.Column="0"
+                        Margin="20,10,0,10"
+                        HorizontalOptions="Start"
+                        VerticalOptions="FillAndExpand"
+                        Source="ic_avatar"  />
+                <Label
+                    Grid.Row="5"
+                    Grid.Column="1"
+                    Margin="20,20,0,10"
+                    HorizontalOptions="StartAndExpand"
+                    VerticalOptions="FillAndExpand"
+                    Text="Tallah Cotton"
+                    TextColor="{StaticResource ProfileText}"
+                    FontSize="16"/>
+
+                <Grid Grid.Row="5" Grid.Column="2" />
+            </Grid>
+            <Button
+                    Grid.Row="4"
+                    Grid.Column="0"
+                    Margin="0,0,0,0"
+                    BackgroundColor="{StaticResource PurpleBrownO}"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="EndAndExpand"                
+                    Text="İLERİ"
+                    TextColor="White" />
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

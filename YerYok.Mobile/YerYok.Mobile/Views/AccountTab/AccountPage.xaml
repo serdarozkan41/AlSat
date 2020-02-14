@@ -1,0 +1,601 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView
+    x:Class="YerYok.Mobile.Views.AccountTab.AccountPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:tabs="clr-namespace:Sharpnado.Presentation.Forms.CustomViews.Tabs;assembly=Sharpnado.Presentation.Forms"
+    mc:Ignorable="d">
+    <ContentView.Content>
+        <Grid>
+            <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Margin="0,20,0,0"
+                    HorizontalOptions="CenterAndExpand"
+                    RowSpacing="0"
+                    VerticalOptions="StartAndExpand">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Image
+                        Grid.Row="0"
+                        Grid.RowSpan="3"
+                        Grid.Column="0"
+                        Margin="20,10,20,10"
+                        HorizontalOptions="Start"
+                        Source="ic_profile"
+                        VerticalOptions="FillAndExpand" />
+                    <Label
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        FontFamily="{StaticResource FontBold}"
+                        FontSize="20"
+                        HorizontalOptions="CenterAndExpand"
+                        Text="Esra Babadağ"
+                        TextColor="{StaticResource PurpleBrownO}"
+                        VerticalOptions="CenterAndExpand" />
+                    <Label
+                        Grid.Row="2"
+                        Grid.Column="1"
+                        FontFamily="{StaticResource FontRegularSF}"
+                        FontSize="12"
+                        HorizontalOptions="Start"
+                        Text="Beşiktaş-İstanbul"
+                        TextColor="{StaticResource CheckBoxGray}"
+                        VerticalOptions="StartAndExpand" />
+                    <Image
+                        Grid.Row="0"
+                        Grid.Column="2"
+                        HorizontalOptions="EndAndExpand"
+                        Source="ic_pen"
+                        VerticalOptions="EndAndExpand">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer x:Name="BuPen" Tapped="BuPen_Tapped" />
+                        </Image.GestureRecognizers>
+                    </Image>
+                </Grid>
+                <Grid Grid.Row="1" Grid.Column="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <tabs:TabHostView
+                        x:Name="TabHost"
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        BackgroundColor="#f8f8f8"
+                        SelectedIndex="{Binding Source={x:Reference Switcher}, Path=SelectedIndex, Mode=TwoWay}"
+                        ShadowType="None"
+                        TabType="Fixed">
+                        <tabs:TabHostView.Tabs>
+                            <tabs:UnderlinedTabItem
+                                HeightRequest="50"
+                                Label="MENU"
+                                SelectedTabColor="{StaticResource PurplishPink}"
+                                UnselectedLabelColor="Black" />
+                            <tabs:UnderlinedTabItem
+                                HeightRequest="50"
+                                Label="142                       ÜRÜN"
+                                SelectedTabColor="{StaticResource PurplishPink}"
+                                UnselectedLabelColor="Black" />
+                            <tabs:UnderlinedTabItem
+                                HeightRequest="50"
+                                Label="1                        SATIŞ"
+                                SelectedTabColor="{StaticResource PurplishPink}"
+                                UnselectedLabelColor="Black" />
+                            <tabs:UnderlinedTabItem
+                                HeightRequest="50"
+                                Label="2418 TAKİPÇİ"
+                                SelectedTabColor="{StaticResource PurplishPink}"
+                                UnselectedLabelColor="Black" />
+                            <tabs:UnderlinedTabItem
+                                HeightRequest="50"
+                                Label="474                  TAKİP"
+                                SelectedTabColor="{StaticResource PurplishPink}"
+                                UnselectedLabelColor="Black" />
+                        </tabs:TabHostView.Tabs>
+                    </tabs:TabHostView>
+                    <tabs:ViewSwitcher
+                        x:Name="Switcher"
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        Animate="False"
+                        SelectedIndex="{Binding SelectedViewModelIndex, Mode=TwoWay}">
+                        <ListView
+                            x:Name="LvMenu"
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            BackgroundColor="White"
+                            HasUnevenRows="True"
+                            ItemSelected="LvMenu_ItemSelected">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <ViewCell>
+                                        <Grid
+                                            BackgroundColor="White"
+                                            HeightRequest="50"
+                                            HorizontalOptions="FillAndExpand"
+                                            VerticalOptions="FillAndExpand"
+                                            WidthRequest="50">
+                                            <Grid
+                                                BackgroundColor="White"
+                                                HorizontalOptions="FillAndExpand"
+                                                VerticalOptions="FillAndExpand">
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="50" />
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="Auto" />
+                                                    <ColumnDefinition Width="Auto" />
+                                                </Grid.ColumnDefinitions>
+                                                <StackLayout
+                                                    Grid.Row="0"
+                                                    Grid.Column="0"
+                                                    Orientation="Horizontal">
+                                                    <Image
+                                                        Margin="10,5"
+                                                        HorizontalOptions="Start"
+                                                        Source="{Binding Icon}"
+                                                        VerticalOptions="Center" />
+                                                    <Label
+                                                        Margin="10,5"
+                                                        FontFamily="{StaticResource FontRegularSF}"
+                                                        FontSize="22"
+                                                        HorizontalOptions="Start"
+                                                        HorizontalTextAlignment="Start"
+                                                        Text="{Binding CategoryName}"
+                                                        TextColor="{StaticResource ProfileText}"
+                                                        VerticalOptions="Center"
+                                                        VerticalTextAlignment="Center" />
+                                                </StackLayout>
+
+                                            </Grid>
+
+                                        </Grid>
+                                    </ViewCell>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                        <CollectionView
+                            Margin="10,20,10,10"
+                            HorizontalOptions="Center"
+                            ItemsSource="{Binding Products}"
+                            SelectionMode="None"
+                            VerticalOptions="Center">
+                            <CollectionView.ItemsLayout>
+                                <GridItemsLayout Orientation="Vertical" Span="2" />
+                            </CollectionView.ItemsLayout>
+                            <CollectionView.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid
+                                        Padding="5,10,5,10"
+                                        HeightRequest="205"
+                                        WidthRequest="170">
+                                        <Grid.GestureRecognizers>
+                                            <TapGestureRecognizer
+                                                x:Name="BuItemSelect"
+                                                CommandParameter="{Binding .}"
+                                                Tapped="BuItemSelect_Tapped" />
+                                        </Grid.GestureRecognizers>
+                                        <Frame
+                                            Margin="0"
+                                            Padding="0"
+                                            BorderColor="{StaticResource LineGray}"
+                                            CornerRadius="10"
+                                            HasShadow="False"
+                                            HeightRequest="170"
+                                            VerticalOptions="Start"
+                                            WidthRequest="170">
+                                            <Grid>
+                                                <Image
+                                                    Margin="20,10,20,20"
+                                                    BackgroundColor="Transparent"
+                                                    HorizontalOptions="Center"
+                                                    Source="{Binding CoverImg}"
+                                                    VerticalOptions="Start" />
+                                                <Image
+                                                    Margin="0,15,20,0"
+                                                    BackgroundColor="Transparent"
+                                                    HorizontalOptions="End"
+                                                    IsVisible="{Binding IsFavori}"
+                                                    Source="ic_fullheart"
+                                                    VerticalOptions="Start" />
+                                            </Grid>
+                                        </Frame>
+                                        <Frame
+                                            Margin="10,0,10,0"
+                                            Padding="0"
+                                            BorderColor="#EEEEEE"
+                                            CornerRadius="10"
+                                            HasShadow="False"
+                                            HeightRequest="70"
+                                            VerticalOptions="End"
+                                            WidthRequest="170">
+                                            <Grid>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="*" />
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="*" />
+                                                    <ColumnDefinition Width="*" />
+                                                </Grid.ColumnDefinitions>
+                                                <Label
+                                                    Grid.Row="0"
+                                                    Grid.Column="0"
+                                                    Margin="10,0,0,0"
+                                                    FontFamily="{StaticResource FontRegularSF}"
+                                                    FontSize="14"
+                                                    HorizontalOptions="Start"
+                                                    HorizontalTextAlignment="Start"
+                                                    Text="{Binding Name}"
+                                                    TextColor="Black"
+                                                    VerticalOptions="Center" />
+                                                <Grid
+                                                    Grid.Row="0"
+                                                    Grid.Column="1"
+                                                    Margin="0,0,10,0"
+                                                    HorizontalOptions="End"
+                                                    RowSpacing="0"
+                                                    VerticalOptions="Center">
+                                                    <Grid.RowDefinitions>
+                                                        <RowDefinition Height="Auto" />
+                                                        <RowDefinition Height="Auto" />
+                                                    </Grid.RowDefinitions>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="*" />
+                                                    </Grid.ColumnDefinitions>
+                                                    <Label
+                                                        Grid.Row="0"
+                                                        Grid.Column="0"
+                                                        FontFamily="{StaticResource FontBold}"
+                                                        FontSize="12"
+                                                        HorizontalOptions="End"
+                                                        HorizontalTextAlignment="End"
+                                                        Text="{Binding OldPrice, StringFormat='₺{0}'}"
+                                                        TextColor="#8b8a8a"
+                                                        TextDecorations="Strikethrough"
+                                                        VerticalOptions="CenterAndExpand"
+                                                        VerticalTextAlignment="Center" />
+                                                    <Label
+                                                        Grid.Row="1"
+                                                        Grid.Column="0"
+                                                        FontFamily="{StaticResource FontBook}"
+                                                        FontSize="22"
+                                                        HorizontalOptions="End"
+                                                        HorizontalTextAlignment="End"
+                                                        Text="{Binding Price, StringFormat='₺{0}'}"
+                                                        TextColor="Black"
+                                                        VerticalOptions="CenterAndExpand"
+                                                        VerticalTextAlignment="Center" />
+                                                </Grid>
+                                            </Grid>
+                                        </Frame>
+
+
+                                    </Grid>
+                                </DataTemplate>
+                            </CollectionView.ItemTemplate>
+                        </CollectionView>
+                        <CollectionView
+                            Margin="10,20,10,10"
+                            HorizontalOptions="Center"
+                            ItemsSource="{Binding SellingProducts}"
+                            SelectionMode="None"
+                            VerticalOptions="Center">
+                            <CollectionView.ItemsLayout>
+                                <GridItemsLayout Orientation="Vertical" Span="2" />
+                            </CollectionView.ItemsLayout>
+                            <CollectionView.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid
+                                        Padding="5,10,5,10"
+                                        HeightRequest="205"
+                                        WidthRequest="170">
+                                        <Grid.GestureRecognizers>
+                                            <TapGestureRecognizer
+                                                x:Name="BuItemSelect"
+                                                CommandParameter="{Binding .}"
+                                                Tapped="BuItemSelect_Tapped" />
+                                        </Grid.GestureRecognizers>
+                                        <Frame
+                                            Margin="0"
+                                            Padding="0"
+                                            BorderColor="{StaticResource LineGray}"
+                                            CornerRadius="10"
+                                            HasShadow="False"
+                                            HeightRequest="170"
+                                            VerticalOptions="Start"
+                                            WidthRequest="170">
+                                            <Grid>
+                                                <Image
+                                                    Margin="20,10,20,20"
+                                                    BackgroundColor="Transparent"
+                                                    HorizontalOptions="Center"
+                                                    Source="{Binding CoverImg}"
+                                                    VerticalOptions="Start" />
+                                                <Image
+                                                    Margin="0,15,20,0"
+                                                    BackgroundColor="Transparent"
+                                                    HorizontalOptions="End"
+                                                    IsVisible="{Binding IsFavori}"
+                                                    Source="ic_fullheart"
+                                                    VerticalOptions="Start" />
+                                            </Grid>
+                                        </Frame>
+                                        <Frame
+                                            Margin="10,0,10,0"
+                                            Padding="0"
+                                            BorderColor="#EEEEEE"
+                                            CornerRadius="10"
+                                            HasShadow="False"
+                                            HeightRequest="70"
+                                            VerticalOptions="End"
+                                            WidthRequest="170">
+                                            <Grid>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="*" />
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="*" />
+                                                    <ColumnDefinition Width="*" />
+                                                </Grid.ColumnDefinitions>
+                                                <Label
+                                                    Grid.Row="0"
+                                                    Grid.Column="0"
+                                                    Margin="10,0,0,0"
+                                                    FontFamily="{StaticResource FontRegularSF}"
+                                                    FontSize="14"
+                                                    HorizontalOptions="Start"
+                                                    HorizontalTextAlignment="Start"
+                                                    Text="{Binding Name}"
+                                                    TextColor="Black"
+                                                    VerticalOptions="Center" />
+                                                <Grid
+                                                    Grid.Row="0"
+                                                    Grid.Column="1"
+                                                    Margin="0,0,10,0"
+                                                    HorizontalOptions="End"
+                                                    RowSpacing="0"
+                                                    VerticalOptions="Center">
+                                                    <Grid.RowDefinitions>
+                                                        <RowDefinition Height="Auto" />
+                                                        <RowDefinition Height="Auto" />
+                                                    </Grid.RowDefinitions>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="*" />
+                                                    </Grid.ColumnDefinitions>
+                                                    <Label
+                                                        Grid.Row="0"
+                                                        Grid.Column="0"
+                                                        FontFamily="{StaticResource FontBold}"
+                                                        FontSize="12"
+                                                        HorizontalOptions="End"
+                                                        HorizontalTextAlignment="End"
+                                                        Text="{Binding OldPrice, StringFormat='₺{0}'}"
+                                                        TextColor="#8b8a8a"
+                                                        TextDecorations="Strikethrough"
+                                                        VerticalOptions="CenterAndExpand"
+                                                        VerticalTextAlignment="Center" />
+                                                    <Label
+                                                        Grid.Row="1"
+                                                        Grid.Column="0"
+                                                        FontFamily="{StaticResource FontBook}"
+                                                        FontSize="22"
+                                                        HorizontalOptions="End"
+                                                        HorizontalTextAlignment="End"
+                                                        Text="{Binding Price, StringFormat='₺{0}'}"
+                                                        TextColor="Black"
+                                                        VerticalOptions="CenterAndExpand"
+                                                        VerticalTextAlignment="Center" />
+                                                </Grid>
+                                            </Grid>
+                                        </Frame>
+
+
+                                    </Grid>
+                                </DataTemplate>
+                            </CollectionView.ItemTemplate>
+                        </CollectionView>
+                        <Grid RowSpacing="0">
+                            <Grid
+                                Grid.Row="0"
+                                Grid.Column="0"
+                                BackgroundColor="White"
+                                HorizontalOptions="FillAndExpand"
+                                VerticalOptions="FillAndExpand">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+
+                                <Image
+                                    Grid.Row="0"
+                                    Grid.Column="0"
+                                    Margin="20,0,0,0"
+                                    HorizontalOptions="StartAndExpand"
+                                    Source="ic_profile"
+                                    VerticalOptions="CenterAndExpand" />
+                                <Label
+                                    Grid.Row="0"
+                                    Grid.Column="1"
+                                    Margin="10,20,0,10"
+                                    FontFamily="{StaticResource FontRegularSF}"
+                                    FontSize="20"
+                                    HorizontalOptions="FillAndExpand"
+                                    HorizontalTextAlignment="Start"
+                                    Text="Sammy Lawson"
+                                    TextColor="{StaticResource ProfileText}"
+                                    VerticalOptions="FillAndExpand">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer x:Name="BuPerson" Tapped="BuPerson_Tapped" />
+                                    </Label.GestureRecognizers>
+                                </Label>
+                                <Frame
+                                    Grid.Row="0"
+                                    Grid.Column="2"
+                                    Margin="20,10,0,0"
+                                    Padding="10,5,10,5"
+                                    BackgroundColor="Transparent"
+                                    BorderColor="{StaticResource LineGray}"
+                                    CornerRadius="75"
+                                    HasShadow="False"
+                                    HeightRequest="20"
+                                    HorizontalOptions="Center"
+                                    VerticalOptions="Center">
+                                    <Frame.CornerRadius>
+                                        <OnPlatform x:TypeArguments="x:Single">
+                                            <OnPlatform.Platforms>
+                                                <On Platform="iOS" Value="10" />
+                                                <On Platform="Android" Value="30" />
+
+                                            </OnPlatform.Platforms>
+                                        </OnPlatform>
+                                    </Frame.CornerRadius>
+                                    <Label
+                                        FontFamily="FontBook"
+                                        FontSize="14"
+                                        LineBreakMode="NoWrap"
+                                        Text="+ Takip Et"
+                                        TextColor="{StaticResource PurplishPink}" />
+                                </Frame>
+                            </Grid>
+
+                        </Grid>
+                        <Grid RowSpacing="0">
+                            <Grid
+                                Grid.Row="0"
+                                Grid.Column="0"
+                                BackgroundColor="White"
+                                HorizontalOptions="FillAndExpand"
+                                VerticalOptions="FillAndExpand">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+
+                                <Image
+                                    Grid.Row="0"
+                                    Grid.Column="0"
+                                    Margin="20,0,0,0"
+                                    HeightRequest="60"
+                                    HorizontalOptions="StartAndExpand"
+                                    Source="oval"
+                                    VerticalOptions="CenterAndExpand" />
+                                <Label
+                                    Grid.Row="0"
+                                    Grid.Column="1"
+                                    Margin="10,20,0,10"
+                                    FontFamily="{StaticResource FontRegularSF}"
+                                    FontSize="20"
+                                    HorizontalOptions="FillAndExpand"
+                                    HorizontalTextAlignment="Start"
+                                    Text="Ingo Schimpff"
+                                    TextColor="{StaticResource ProfileText}"
+                                    VerticalOptions="FillAndExpand">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer x:Name="BuFollow" Tapped="BuFollow_Tapped" />
+                                    </Label.GestureRecognizers>
+                                </Label>
+                                <Frame
+                                    Grid.Row="0"
+                                    Grid.Column="2"
+                                    Margin="20,10,0,0"
+                                    Padding="10,5,10,5"
+                                    BackgroundColor="Transparent"
+                                    BorderColor="{StaticResource LineGray}"
+                                    CornerRadius="75"
+                                    HasShadow="False"
+                                    HeightRequest="20"
+                                    HorizontalOptions="Center"
+                                    VerticalOptions="Center">
+                                    <Frame.CornerRadius>
+                                        <OnPlatform x:TypeArguments="x:Single">
+                                            <OnPlatform.Platforms>
+                                                <On Platform="iOS" Value="10" />
+                                                <On Platform="Android" Value="30" />
+
+                                            </OnPlatform.Platforms>
+                                        </OnPlatform>
+                                    </Frame.CornerRadius>
+                                    <Label
+                                        FontFamily="FontBook"
+                                        FontSize="14"
+                                        LineBreakMode="NoWrap"
+                                        Text="+ Takip Et"
+                                        TextColor="{StaticResource PurplishPink}" />
+                                </Frame>
+                            </Grid>
+
+                        </Grid>
+
+                    </tabs:ViewSwitcher>
+
+                </Grid>
+            </Grid>
+            <ContentView
+                BackgroundColor="{StaticResource OverlayColor}"
+                HorizontalOptions="FillAndExpand"
+                IsVisible="{Binding IsBusy}"
+                Opacity="0.75"
+                VerticalOptions="FillAndExpand">
+                <ActivityIndicator
+                    HorizontalOptions="CenterAndExpand"
+                    IsRunning="{Binding IsBusy}"
+                    IsVisible="{Binding IsBusy}"
+                    VerticalOptions="CenterAndExpand"
+                    Color="{StaticResource IndicatorColor}" />
+            </ContentView>
+        </Grid>
+    </ContentView.Content>
+</ContentView>

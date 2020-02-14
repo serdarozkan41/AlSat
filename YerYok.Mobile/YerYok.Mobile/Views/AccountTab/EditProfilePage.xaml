@@ -1,0 +1,303 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="YerYok.Mobile.Views.EditProfilePage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:templates="clr-namespace:YerYok.Mobile.Views.Templates"
+    NavigationPage.HasNavigationBar="False"
+    mc:Ignorable="d">
+    <ContentPage.Content>
+        <Grid>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <templates:HeaderNavigationBar
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    IsBack="True"
+                    NewTitle="Profil Düzenle" />
+                <Grid
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    RowSpacing="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+
+
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+
+                    <Grid
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Margin="0,0,0,13"
+                        HorizontalOptions="FillAndExpand"
+                        RowSpacing="0"
+                        VerticalOptions="FillAndExpand">
+                        <Image
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            Margin="20,10,0,10"
+                            HeightRequest="110"
+                            HorizontalOptions="Start"
+                            Source="ic_profile"
+                            VerticalOptions="FillAndExpand"
+                            WidthRequest="110" />
+                    </Grid>
+                    <Grid
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        Margin="20,0,0,10">
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <Label
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            Margin="10,10,0,10"
+                            HorizontalOptions="StartAndExpand"
+                            Text="Ad Soyad"
+                            VerticalOptions="StartAndExpand" />
+
+                        <Label
+                            Grid.Row="1"
+                            Grid.Column="0"
+                            Margin="10,0,0,10"
+                            FontAttributes="Bold"
+                            FontSize="16"
+                            HorizontalOptions="StartAndExpand"
+                            Text="Esra Babadağ"
+                            TextColor="Black"
+                            VerticalOptions="StartAndExpand" />
+                        <StackLayout
+                            Grid.Row="2"
+                            Grid.Column="0"
+                            Margin="0,0,20,0"
+                            HorizontalOptions="FillAndExpand"
+                            Orientation="Horizontal"
+                            Spacing="0"
+                            VerticalOptions="FillAndExpand">
+                            <BoxView
+                                Margin="0,0,0,0"
+                                HeightRequest="2"
+                                HorizontalOptions="FillAndExpand"
+                                VerticalOptions="FillAndExpand"
+                                Color="{StaticResource LineGray}" />
+
+                        </StackLayout>
+                    </Grid>
+                    <Grid
+                        Grid.Row="2"
+                        Grid.Column="0"
+                        Margin="20,10,0,10">
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <Label
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            Margin="10,10,0,10"
+                            HorizontalOptions="StartAndExpand"
+                            Text="E-POSTA"
+                            VerticalOptions="StartAndExpand" />
+
+                        <Label
+                            Grid.Row="1"
+                            Grid.Column="0"
+                            Margin="10,0,0,10"
+                            FontAttributes="Bold"
+                            FontSize="16"
+                            HorizontalOptions="StartAndExpand"
+                            Text="ebabadag@porland.com.tr"
+                            TextColor="Black"
+                            VerticalOptions="StartAndExpand" />
+                        <StackLayout
+                            Grid.Row="2"
+                            Grid.Column="0"
+                            Margin="0,0,20,0"
+                            HorizontalOptions="FillAndExpand"
+                            Orientation="Horizontal"
+                            Spacing="0"
+                            VerticalOptions="FillAndExpand">
+                            <BoxView
+                                Margin="0,0,0,0"
+                                HeightRequest="2"
+                                HorizontalOptions="FillAndExpand"
+                                VerticalOptions="FillAndExpand"
+                                Color="{StaticResource LineGray}" />
+
+                        </StackLayout>
+                    </Grid>
+                    <Grid
+                        Grid.Row="3"
+                        Grid.Column="0"
+                        Margin="20,0,10,10">
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <Label
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            Margin="10,10,0,10"
+                            HorizontalOptions="StartAndExpand"
+                            Text="LOKASYON"
+                            VerticalOptions="StartAndExpand" />
+
+                        <Label
+                            Grid.Row="1"
+                            Grid.Column="0"
+                            Margin="10,0,0,10"
+                            FontAttributes="Bold"
+                            FontSize="16"
+                            HorizontalOptions="StartAndExpand"
+                            Text="Beşiktaş-İstanbul"
+                            TextColor="Black"
+                            VerticalOptions="StartAndExpand" />
+                        <StackLayout
+                            Grid.Row="2"
+                            Grid.Column="0"
+                            Margin="0,0,20,0"
+                            HorizontalOptions="FillAndExpand"
+                            Orientation="Horizontal"
+                            Spacing="0"
+                            VerticalOptions="FillAndExpand">
+                            <BoxView
+                                Margin="0,0,0,0"
+                                HeightRequest="2"
+                                HorizontalOptions="FillAndExpand"
+                                VerticalOptions="FillAndExpand"
+                                Color="{StaticResource LineGray}" />
+
+                        </StackLayout>
+                    </Grid>
+                    <Grid
+                        Grid.Row="4"
+                        Grid.Column="0"
+                        Margin="20,0,0,0">
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <Label
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            Margin="10,10,0,10"
+                            HorizontalOptions="StartAndExpand"
+                            Text="ŞİFRE"
+                            VerticalOptions="StartAndExpand" />
+
+                        <Label
+                            Grid.Row="1"
+                            Grid.Column="0"
+                            Margin="10,0,0,10"
+                            FontAttributes="Bold"
+                            FontSize="16"
+                            HorizontalOptions="StartAndExpand"
+                            Text="*******"
+                            TextColor="Black"
+                            VerticalOptions="StartAndExpand" />
+
+                        <Image
+                            Grid.Row="1"
+                            Grid.Column="2"
+                            Margin="20,10,0,10"
+                            HorizontalOptions="Start"
+                            Source="ic_songez"
+                            VerticalOptions="FillAndExpand" />
+                        <Image
+                            Grid.Row="1"
+                            Grid.Column="3"
+                            Margin="20,10,0,10"
+                            HorizontalOptions="Start"
+                            Source="ic_pen"
+                            VerticalOptions="FillAndExpand">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer x:Name="ChancePassword" Tapped="ChancePassword_Tapped" />
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <BoxView
+                            Grid.Row="2"
+                            Grid.Column="0"
+                            Grid.ColumnSpan="3"
+                            Margin="0,10,0,0"
+                            HeightRequest="2"
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="FillAndExpand"
+                            Color="{StaticResource LineGray}" />
+
+
+                    </Grid>
+                    <Button
+                        Grid.Row="5"
+                        Grid.Column="0"
+                        Margin="0,0,0,0"
+                        BackgroundColor="{StaticResource PurpleBrownO}"
+                        HorizontalOptions="FillAndExpand"
+                        Text="KAYDET"
+                        TextColor="White"
+                        VerticalOptions="EndAndExpand" />
+
+
+                </Grid>
+            </Grid>
+            <ContentView
+                BackgroundColor="{StaticResource OverlayColor}"
+                HorizontalOptions="FillAndExpand"
+                IsVisible="{Binding IsBusy}"
+                Opacity="0.75"
+                VerticalOptions="FillAndExpand">
+                <ActivityIndicator
+                    HorizontalOptions="CenterAndExpand"
+                    IsRunning="{Binding IsBusy}"
+                    IsVisible="{Binding IsBusy}"
+                    VerticalOptions="CenterAndExpand"
+                    Color="{StaticResource IndicatorColor}" />
+            </ContentView>
+        </Grid>
+
+    </ContentPage.Content>
+</ContentPage>

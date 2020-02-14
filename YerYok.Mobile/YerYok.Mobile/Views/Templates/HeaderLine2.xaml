@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Grid
+    x:Class="YerYok.Mobile.Views.Templates.HeaderLine2"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    ColumnSpacing="0"
+    mc:Ignorable="d">
+    <Grid.RowDefinitions>
+        <RowDefinition Height="5" />
+    </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*" />
+        <ColumnDefinition Width="*" />
+        <ColumnDefinition Width="*" />
+        <ColumnDefinition Width="*" />
+    </Grid.ColumnDefinitions>
+    <BoxView
+        Grid.Row="0"
+        Grid.Column="0"
+        HeightRequest="6"
+        Color="{StaticResource PurpleBrown}" />
+    <BoxView
+        Grid.Row="0"
+        Grid.Column="1"
+        HeightRequest="6"
+        Color="{StaticResource PurpleBrownO}" />
+    <BoxView
+        Grid.Row="0"
+        Grid.Column="2"
+        HeightRequest="6"
+        Color="{StaticResource PurpleBrown}" />
+    <BoxView
+        Grid.Row="0"
+        Grid.Column="3"
+        HeightRequest="6"
+        Color="{StaticResource PurpleBrownO}" />
+</Grid>

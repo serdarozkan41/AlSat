@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="YerYok.Mobile.Views.AddPhotoPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:templates="clr-namespace:YerYok.Mobile.Views.Templates"
+    NavigationPage.HasNavigationBar="False"
+    mc:Ignorable="d">
+    <ContentPage.Content>
+        <Grid>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <templates:HeaderNavigationBar
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    IsBack="True"
+                    NewTitle="Fotoğraf Ekle" />
+                <Grid Grid.Row="1" Grid.Column="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Grid
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Margin="15">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <BoxView
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            BackgroundColor="{StaticResource LineGray}"
+                            HeightRequest="180"
+                            HorizontalOptions="CenterAndExpand"
+                            VerticalOptions="CenterAndExpand"
+                            WidthRequest="180" />
+                        <Image
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            HorizontalOptions="CenterAndExpand"
+                            Source="ic_plusphoto"
+                            VerticalOptions="CenterAndExpand" />
+                        <BoxView
+                            Grid.Row="0"
+                            Grid.Column="1"
+                            BackgroundColor="{StaticResource LineGray}"
+                            HeightRequest="180"
+                            HorizontalOptions="CenterAndExpand"
+                            VerticalOptions="CenterAndExpand"
+                            WidthRequest="180" />
+                        <Image
+                            Grid.Row="0"
+                            Grid.Column="1"
+                            HorizontalOptions="CenterAndExpand"
+                            Source="ic_plusphoto"
+                            VerticalOptions="CenterAndExpand" />
+                        <BoxView
+                            Grid.Row="1"
+                            Grid.Column="0"
+                            BackgroundColor="{StaticResource LineGray}"
+                            HeightRequest="180"
+                            HorizontalOptions="CenterAndExpand"
+                            VerticalOptions="CenterAndExpand"
+                            WidthRequest="180" />
+                        <Image
+                            Grid.Row="1"
+                            Grid.Column="0"
+                            HorizontalOptions="CenterAndExpand"
+                            Source="ic_plusphoto"
+                            VerticalOptions="CenterAndExpand" />
+                        <BoxView
+                            Grid.Row="1"
+                            Grid.Column="1"
+                            BackgroundColor="{StaticResource LineGray}"
+                            HeightRequest="180"
+                            HorizontalOptions="CenterAndExpand"
+                            VerticalOptions="CenterAndExpand"
+                            WidthRequest="180" />
+                        <Image
+                            Grid.Row="1"
+                            Grid.Column="1"
+                            HorizontalOptions="CenterAndExpand"
+                            Source="ic_plusphoto"
+                            VerticalOptions="CenterAndExpand" />
+
+
+                    </Grid>
+                    <Grid Grid.Row="1" Grid.Column="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Label
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            Margin="30,20,30,0"
+                            FontFamily="{StaticResource FontRegularSF}"
+                            FontSize="14"
+                            HorizontalOptions="CenterAndExpand"
+                            HorizontalTextAlignment="Center"
+                            Text="Fotoğraf çekimi yaparak ya da kütüphanenizden ürün fotoğraflarını seçerek ürünlerinizi ekleyebilirsiniz."
+                            TextColor="{StaticResource ProfileText}"
+                            VerticalOptions="CenterAndExpand"
+                            VerticalTextAlignment="Center" />
+                    </Grid>
+                    <Grid
+                        Grid.Row="2"
+                        Grid.Column="0"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="EndAndExpand">
+                        <Button
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            Margin="0,0,0,0"
+                            BackgroundColor="{StaticResource PurpleBrownO}"
+                            HorizontalOptions="FillAndExpand"
+                            Text="İLERİ"
+                            TextColor="White"
+                            VerticalOptions="EndAndExpand" />
+
+                    </Grid>
+                </Grid>
+            </Grid>
+            <ContentView
+                BackgroundColor="{StaticResource OverlayColor}"
+                HorizontalOptions="FillAndExpand"
+                IsVisible="{Binding IsBusy}"
+                Opacity="0.75"
+                VerticalOptions="FillAndExpand">
+                <ActivityIndicator
+                    HorizontalOptions="CenterAndExpand"
+                    IsRunning="{Binding IsBusy}"
+                    IsVisible="{Binding IsBusy}"
+                    VerticalOptions="CenterAndExpand"
+                    Color="{StaticResource IndicatorColor}" />
+            </ContentView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

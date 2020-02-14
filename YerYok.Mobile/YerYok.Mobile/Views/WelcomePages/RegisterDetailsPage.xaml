@@ -1,0 +1,277 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="YerYok.Mobile.Views.RegisterDetailsPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:input="clr-namespace:Plugin.InputKit.Shared.Controls;assembly=Plugin.InputKit"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:templates="clr-namespace:YerYok.Mobile.Views.Templates"
+    NavigationPage.HasNavigationBar="False"
+    mc:Ignorable="d">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <templates:HeaderLine Grid.Row="0" Grid.Column="0" />
+            <ScrollView Grid.Row="1" Grid.Column="0">
+                <Grid Margin="0,10,0,0" HorizontalOptions="FillAndExpand">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Label
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Margin="30,20,30,0"
+                        FontFamily="{StaticResource FontBook}"
+                        FontSize="42"
+                        HorizontalOptions="Center"
+                        Text="Kayıt Ol"
+                        TextColor="{StaticResource PurplishPurple}" />
+                    <Button
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        Margin="20,20,20,0"
+                        BackgroundColor="{StaticResource FacebookBlue}"
+                        CornerRadius="5"
+                        FontFamily="{StaticResource FontBoldSF}"
+                        HorizontalOptions="FillAndExpand"
+                        ImageSource="ic_facebook"
+                        Text="Facebook ile giriş yap"
+                        TextColor="White" />
+                    <Grid
+                        Grid.Row="2"
+                        Grid.Column="0"
+                        Margin="0,20,0,0"
+                        HorizontalOptions="FillAndExpand">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <Entry
+                            x:Name="TBAd"
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            Margin="20,0,0,0"
+                            BackgroundColor="#efefef"
+                            HorizontalOptions="FillAndExpand"
+                            HorizontalTextAlignment="Center"
+                            Keyboard="Text"
+                            Placeholder="Ad"
+                            PlaceholderColor="#bdbdbd"
+                            ReturnType="Next"
+                            Style="{StaticResource StandartEntryForInsta}"
+                            TextColor="Black" />
+
+                        <Entry
+                            x:Name="TBSoyad"
+                            Grid.Row="0"
+                            Grid.Column="1"
+                            Margin="0,0,20,0"
+                            BackgroundColor="#efefef"
+                            HorizontalOptions="FillAndExpand"
+                            HorizontalTextAlignment="Center"
+                            Keyboard="Text"
+                            Placeholder="Soyad"
+                            PlaceholderColor="#bdbdbd"
+                            ReturnType="Done"
+                            Style="{StaticResource StandartEntryForInsta}"
+                            TextColor="Black" />
+                    </Grid>
+                    <Entry
+                        x:Name="TBEmail"
+                        Grid.Row="3"
+                        Grid.Column="0"
+                        Margin="20,0,20,0"
+                        BackgroundColor="#efefef"
+                        HorizontalOptions="FillAndExpand"
+                        HorizontalTextAlignment="Center"
+                        Keyboard="Text"
+                        Placeholder="E-posta"
+                        PlaceholderColor="#bdbdbd"
+                        ReturnType="Next"
+                        Style="{StaticResource StandartEntryForInsta}"
+                        TextColor="Black" />
+                    <Entry
+                        x:Name="TBPhoneNumber"
+                        Grid.Row="4"
+                        Grid.Column="0"
+                        Margin="20,0,20,0"
+                        BackgroundColor="#efefef"
+                        HorizontalOptions="FillAndExpand"
+                        HorizontalTextAlignment="Center"
+                        Keyboard="Telephone"
+                        Placeholder="Telefon No"
+                        PlaceholderColor="#bdbdbd"
+                        ReturnType="Next"
+                        Style="{StaticResource StandartEntryForInsta}"
+                        TextColor="Black" />
+                    <Entry
+                        x:Name="TBSifre"
+                        Grid.Row="5"
+                        Grid.Column="0"
+                        Margin="20,0,20,0"
+                        BackgroundColor="#efefef"
+                        HorizontalOptions="FillAndExpand"
+                        HorizontalTextAlignment="Center"
+                        Keyboard="Text"
+                        Placeholder="Şifre"
+                        PlaceholderColor="#bdbdbd"
+                        ReturnType="Next"
+                        Style="{StaticResource StandartEntryForInsta}"
+                        TextColor="Black" />
+                    <Grid
+                        Grid.Row="6"
+                        Grid.Column="0"
+                        ColumnSpacing="0"
+                        HorizontalOptions="FillAndExpand"
+                        RowSpacing="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <input:CheckBox
+                            x:Name="CBSözleşme"
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            Margin="20,0,0,0"
+                            HorizontalOptions="FillAndExpand"
+                            Text="Gizlilik sözleşmesini ve aydınlatma metnini okudum onaylıyorum."
+                            TextColor="Black"
+                            Type="Check"
+                            VerticalOptions="Center"
+                            Color="{StaticResource CheckBoxGray}" />
+
+                        <!--<CheckBox
+                            x:Name="checkBox"
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            Margin="20,0,0,0"
+                            HorizontalOptions="FillAndExpand"
+                            Color="{StaticResource CheckBoxGray}" />
+
+                        <Label
+                            Grid.Row="0"
+                            Grid.Column="1"
+                            Margin="0,0,20,0"
+                            FontSize="12"
+                            HorizontalOptions="Start"
+                            HorizontalTextAlignment="Start"
+                            Style="{StaticResource StandartEntry}"
+                            Text="Gizlilik sözleşmesini ve aydınlatma metnini okudum onaylıyorum."
+                            TextColor="Black"
+                            VerticalOptions="Center"
+                            VerticalTextAlignment="Center" />-->
+
+
+                    </Grid>
+                    <Grid
+                        Grid.Row="7"
+                        Grid.Column="0"
+                        ColumnSpacing="0"
+                        HorizontalOptions="FillAndExpand"
+                        RowSpacing="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <input:CheckBox
+                            x:Name="CBHaber"
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            Margin="20,0,0,0"
+                            HorizontalOptions="FillAndExpand"
+                            Text="Yeniliklerde E-posta yoluyla haberdar olmak istiyorum."
+                            TextColor="Black"
+                            Type="Check"
+                            VerticalOptions="Center"
+                            Color="{StaticResource CheckBoxGray}" />
+                        <!--<CheckBox
+                            x:Name="checkBox1"
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            Margin="20,0,0,0"
+                            BackgroundColor="Transparent"
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="Center"
+                            Color="{StaticResource CheckBoxGray}" />
+
+                        <Label
+                            Grid.Row="0"
+                            Grid.Column="1"
+                            Margin="0,0,20,0"
+                            FontSize="12"
+                            HorizontalOptions="Start"
+                            HorizontalTextAlignment="Start"
+                            Style="{StaticResource StandartEntry}"
+                            Text="Yeniliklerde E-posta yoluyla haberdar olmak istiyorum."
+                            TextColor="Black"
+                            VerticalOptions="Center"
+                            VerticalTextAlignment="Center" />-->
+
+
+                    </Grid>
+                    <Button
+                        x:Name="BuRegister"
+                        Grid.Row="8"
+                        Grid.Column="0"
+                        Margin="20,10,20,0"
+                        BackgroundColor="{StaticResource PurplishPurple}"
+                        Clicked="BuRegister_Clicked"
+                        CornerRadius="5"
+                        FontFamily="{StaticResource FontRegularSF}"
+                        HorizontalOptions="FillAndExpand"
+                        Text="Kayıt Ol"
+                        TextColor="White" />
+                    <Label
+                        x:Name="LbRegister"
+                        Grid.Row="9"
+                        Grid.Column="0"
+                        Margin="30,10,30,10"
+                        FontFamily="{StaticResource FontRegularSF}"
+                        HorizontalOptions="Center"
+                        HorizontalTextAlignment="Center"
+                        TextType="Html"
+                        VerticalOptions="End"
+                        VerticalTextAlignment="End">
+                        <![CDATA[
+                        Zaten üye misiniz? <strong style="color:#a5495c"> Giriş Yapın.</strong>
+                        ]]>
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer x:Name="buLogin" Tapped="buLogin_Tapped" />
+                        </Label.GestureRecognizers>
+                    </Label>
+                </Grid>
+            </ScrollView>
+
+            <templates:HeaderLine Grid.Row="2" Grid.Column="0" />
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

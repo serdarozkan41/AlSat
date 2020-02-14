@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="YerYok.Mobile.Views.MyCouponPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:templates="clr-namespace:YerYok.Mobile.Views.Templates"
+    NavigationPage.HasNavigationBar="False"
+    mc:Ignorable="d">
+    <ContentPage.Content>
+        <Grid>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <templates:HeaderNavigationBar
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    IsBack="True"
+                    NewTitle="Kuponlarım" />
+                <!--  içerik  -->
+                <Grid Grid.Row="1" Grid.Column="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Button
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Margin="20,10,20,0"
+                        BackgroundColor="{StaticResource PurpleBrown}"
+                        HorizontalOptions="FillAndExpand"
+                        Text="5 TL'lik Kupon"
+                        TextColor="White"
+                        VerticalOptions="Center" />
+                    <Button
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        Margin="20,10,20,0"
+                        BackgroundColor="{StaticResource PurpleBrownO}"
+                        HorizontalOptions="FillAndExpand"
+                        Text="10 TL'lik Kupon"
+                        TextColor="White"
+                        VerticalOptions="Center" />
+                    <Button
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        Margin="20,10,20,0"
+                        BackgroundColor="{StaticResource PurpleBrownO}"
+                        HorizontalOptions="FillAndExpand"
+                        Text="5 TL'lik Kupon"
+                        TextColor="White"
+                        VerticalOptions="Center" />
+                    <Button
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        Margin="20,10,20,0"
+                        BackgroundColor="{StaticResource PurpleBrown}"
+                        HorizontalOptions="FillAndExpand"
+                        Text="5 TL'lik Kupon"
+                        TextColor="White"
+                        VerticalOptions="Center" />
+                </Grid>
+            </Grid>
+            <ContentView
+                BackgroundColor="{StaticResource OverlayColor}"
+                HorizontalOptions="FillAndExpand"
+                IsVisible="{Binding IsBusy}"
+                Opacity="0.75"
+                VerticalOptions="FillAndExpand">
+                <ActivityIndicator
+                    HorizontalOptions="CenterAndExpand"
+                    IsRunning="{Binding IsBusy}"
+                    IsVisible="{Binding IsBusy}"
+                    VerticalOptions="CenterAndExpand"
+                    Color="{StaticResource IndicatorColor}" />
+            </ContentView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

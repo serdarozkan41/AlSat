@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="YerYok.Mobile.Views.AddNowPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:templates="clr-namespace:YerYok.Mobile.Views.Templates"
+    mc:Ignorable="d">
+    <ContentPage.Content>
+        <Grid RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <templates:HeaderNavigationBar Grid.Row="0" Grid.Column="0" />
+
+            <Label
+                Grid.Row="3"
+                Grid.Column="0"
+                Margin="20,10,20,0"
+                BackgroundColor="White"
+                FontSize="16"
+                HorizontalOptions="FillAndExpand"
+                HorizontalTextAlignment="Start"
+                Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius lectus diam, nec sodales leo elementum sit amet. Nunc malesuada tempor ligula. In tincidunt dui justo, sit amet placerat dui tristique ut. Praesent eu hendrerit elit. Nunc tempor ligula at ligula finibus, in egestas erat mollis. Proin ac ligula arcu. Duis rhoncus, mauris aliquet faucibus cursus, dolor neque porttitor ex, et mollis urna tellus id ipsum. Fusce eget sapien nisi. Morbi facilisis eu diam at fermentum. Vivamus non turpis fermentum, pulvinar nisi quis, ullamcorper nibh.  Mauris dapibus maximus urna, eget volutpat erat ultricies nec. Donec eget tellus egestas, dapibus mi ac, semper lorem. In pulvinar tincidunt nunc, non efficitur augue congue nec. Nam at ligula ac orci elementum auctor at sed diam. In velit sapien, viverra at ex eu, placerat tempus risus. Nulla non ex vitae mauris aliquam dignissim pharetra eget diam. Nullam vestibulum interdum maximus. Donec id erat in neque lobortis hendrerit. Nam eu est consequat, placerat nisl vitae, scelerisque mauris. Curabitur vel ipsum quam. Sed eu turpis nec lorem elementum maximus. Mauris cursus sem et ornare volutpat. Aenean urna metus, dictum id condimentum nec, semper quis justo. Sed fringilla justo a nulla finibus, id feugiat mauris suscipit. In ornare sodales libero.  Vestibulum nec bibendum magna. Duis nec arcu interdum, hendrerit ligula nec, tincidunt sem. In nibh ipsum, consectetur tristique nunc in, maximus vulputate erat. Phasellus sollicitudin diam et ipsum egestas, a sollicitudin turpis bibendum. Suspendisse potenti. Fusce non ultrices mauris. Nam at augue porttitor, dictum leo in, lobortis ligula. Donec tincidunt pretium odio, non lacinia neque. Donec non sapien nibh.  "
+                VerticalOptions="FillAndExpand"
+                VerticalTextAlignment="Start" />
+
+
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

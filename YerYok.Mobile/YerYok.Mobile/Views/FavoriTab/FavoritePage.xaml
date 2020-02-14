@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView
+    x:Class="YerYok.Mobile.Views.FavoriTab.FavoritePage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <ContentView.Content>
+        <Grid>
+            <Grid.Margin>
+                <OnPlatform x:TypeArguments="Thickness">
+                    <On Platform="iOS" Value="0,20,0,0" />
+                    <On Platform="Android, WinPhone, Windows" Value="0,0,0,0" />
+                </OnPlatform>
+            </Grid.Margin>
+            <Grid BackgroundColor="#f8f8f8">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Margin="10"
+                    BackgroundColor="#f8f8f8"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Picker
+                        Title="SIRALA"
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Margin="0,10,0,0">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>TÜMÜ</x:String>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+
+                    <Picker
+                        Title="FİLTRE"
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        Margin="0,10,0,0">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>TÜMÜ</x:String>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+                </Grid>
+                <CollectionView
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    Margin="10,20,10,10"
+                    HorizontalOptions="Center"
+                    ItemsSource="{Binding Products}"
+                    SelectionMode="None"
+                    VerticalOptions="Center">
+                    <CollectionView.ItemsLayout>
+                        <GridItemsLayout Orientation="Vertical" Span="2" />
+                    </CollectionView.ItemsLayout>
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid
+                                Padding="5,10,5,10"
+                                HeightRequest="205"
+                                WidthRequest="170">
+                                <Grid.GestureRecognizers>
+                                    <TapGestureRecognizer
+                                        x:Name="BuItemSelect"
+                                        CommandParameter="{Binding .}"
+                                        Tapped="BuItemSelect_Tapped" />
+                                </Grid.GestureRecognizers>
+                                <Frame
+                                    Margin="0"
+                                    Padding="0"
+                                    BorderColor="{StaticResource LineGray}"
+                                    CornerRadius="10"
+                                    HasShadow="False"
+                                    HeightRequest="170"
+                                    VerticalOptions="Start"
+                                    WidthRequest="170">
+                                    <Grid>
+                                        <Image
+                                            Margin="20,10,20,20"
+                                            BackgroundColor="Transparent"
+                                            HorizontalOptions="Center"
+                                            Source="{Binding CoverImg}"
+                                            VerticalOptions="Start" />
+                                        <Image
+                                            Margin="0,15,20,0"
+                                            BackgroundColor="Transparent"
+                                            HorizontalOptions="End"
+                                            IsVisible="{Binding IsFavori}"
+                                            Source="ic_fullheart"
+                                            VerticalOptions="Start" />
+                                    </Grid>
+                                </Frame>
+                                <Frame
+                                    Margin="10,0,10,0"
+                                    Padding="0"
+                                    BorderColor="#EEEEEE"
+                                    CornerRadius="10"
+                                    HasShadow="False"
+                                    HeightRequest="70"
+                                    VerticalOptions="End"
+                                    WidthRequest="170">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="*" />
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+                                        <Label
+                                            Grid.Row="0"
+                                            Grid.Column="0"
+                                            Margin="10,0,0,0"
+                                            FontFamily="{StaticResource FontRegularSF}"
+                                            FontSize="14"
+                                            HorizontalOptions="Start"
+                                            HorizontalTextAlignment="Start"
+                                            Text="{Binding Name}"
+                                            TextColor="Black"
+                                            VerticalOptions="Center" />
+                                        <Grid
+                                            Grid.Row="0"
+                                            Grid.Column="1"
+                                            Margin="0,0,10,0"
+                                            HorizontalOptions="End"
+                                            RowSpacing="0"
+                                            VerticalOptions="Center">
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto" />
+                                                <RowDefinition Height="Auto" />
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*" />
+                                            </Grid.ColumnDefinitions>
+                                            <Label
+                                                Grid.Row="0"
+                                                Grid.Column="0"
+                                                FontFamily="{StaticResource FontBold}"
+                                                FontSize="12"
+                                                HorizontalOptions="End"
+                                                HorizontalTextAlignment="End"
+                                                Text="{Binding OldPrice, StringFormat='₺{0}'}"
+                                                TextColor="#8b8a8a"
+                                                TextDecorations="Strikethrough"
+                                                VerticalOptions="CenterAndExpand"
+                                                VerticalTextAlignment="Center" />
+                                            <Label
+                                                Grid.Row="1"
+                                                Grid.Column="0"
+                                                FontFamily="{StaticResource FontBook}"
+                                                FontSize="22"
+                                                HorizontalOptions="End"
+                                                HorizontalTextAlignment="End"
+                                                Text="{Binding Price, StringFormat='₺{0}'}"
+                                                TextColor="Black"
+                                                VerticalOptions="CenterAndExpand"
+                                                VerticalTextAlignment="Center" />
+                                        </Grid>
+                                    </Grid>
+                                </Frame>
+
+
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </Grid>
+            <ContentView
+                BackgroundColor="{StaticResource OverlayColor}"
+                HorizontalOptions="FillAndExpand"
+                IsVisible="{Binding IsBusy}"
+                Opacity="0.75"
+                VerticalOptions="FillAndExpand">
+                <ActivityIndicator
+                    HorizontalOptions="CenterAndExpand"
+                    IsRunning="{Binding IsBusy}"
+                    IsVisible="{Binding IsBusy}"
+                    VerticalOptions="CenterAndExpand"
+                    Color="{StaticResource IndicatorColor}" />
+            </ContentView>
+        </Grid>
+    </ContentView.Content>
+</ContentView>

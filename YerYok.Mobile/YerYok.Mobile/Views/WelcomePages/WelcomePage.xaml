@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="YerYok.Mobile.Views.WelcomePages.WelcomePage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:templates="clr-namespace:YerYok.Mobile.Views.Templates"
+    NavigationPage.HasNavigationBar="False"
+    mc:Ignorable="d">
+    <ContentPage.Content>
+        <Grid>
+            <templates:BackgroundTemplate BackgroundImage="img_welcome" />
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <templates:HeaderLine Grid.Row="0" Grid.Column="0" />
+
+
+                <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Label
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        Margin="30"
+                        FontFamily="{StaticResource FontBoldSF}"
+                        HorizontalOptions="End"
+                        HorizontalTextAlignment="End"
+                        Text="Geç"
+                        TextColor="White">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer x:Name="BuSkip" Tapped="BuSkip_Tapped" />
+                        </Label.GestureRecognizers>
+                    </Label>
+                    <Image
+                        Grid.Row="1"
+                        Grid.ColumnSpan="2"
+                        HeightRequest="110"
+                        HorizontalOptions="Center"
+                        Source="app_logo"
+                        VerticalOptions="Center" />
+
+                    <Button
+                        x:Name="BuRegister"
+                        Grid.Row="2"
+                        Grid.ColumnSpan="2"
+                        Margin="30,10,30,0"
+                        BackgroundColor="{StaticResource PurplishPink}"
+                        Clicked="BuRegister_Clicked"
+                        CornerRadius="5"
+                        FontFamily="{StaticResource FontRegularSF}"
+                        HeightRequest="75"
+                        Opacity="0.85"
+                        Text="Kullanmaya Başla"
+                        TextColor="White" />
+
+                    <Button
+                        x:Name="BuLogin"
+                        Grid.Row="3"
+                        Grid.ColumnSpan="2"
+                        Margin="30,10,30,0"
+                        BackgroundColor="Transparent"
+                        BorderColor="{StaticResource PurplishPink}"
+                        BorderWidth="1"
+                        Clicked="BuLogin_Clicked"
+                        CornerRadius="5"
+                        FontFamily="{StaticResource FontRegularSF}"
+                        HeightRequest="75"
+                        Text="Giriş Yap"
+                        TextColor="White" />
+
+
+                    <Label
+                        Grid.Row="4"
+                        Grid.ColumnSpan="2"
+                        Margin="30,10,30,0"
+                        FontFamily="{StaticResource FontRegularSF}"
+                        FontSize="12"
+                        HorizontalOptions="Center"
+                        HorizontalTextAlignment="Center"
+                        Text="Yer Yok uygulamasını kullandığında Gizlilik Politikası ve Hizmet Koşullarını kabul etmiş oluyorsun."
+                        TextColor="White"
+                        VerticalOptions="EndAndExpand"
+                        VerticalTextAlignment="End" />
+                </Grid>
+                <templates:HeaderLine Grid.Row="2" Grid.Column="0" />
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

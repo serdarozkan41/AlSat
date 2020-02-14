@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:templates="clr-namespace:YerYok.Mobile.Views.Templates"
+             mc:Ignorable="d"
+             x:Class="YerYok.Mobile.Views.ProductListingAndSelectionPage">
+    <ContentPage.Content>
+        <Grid RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Grid
+                Grid.Row="0"
+                Grid.Column="0"
+                Margin="0,0,0,0"
+                BackgroundColor="{StaticResource ButtonDeactiveGray}"
+                HorizontalOptions="FillAndExpand"
+                RowSpacing="0"
+                VerticalOptions="FillAndExpand">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Label
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Margin="20,10,0,10"
+                    HorizontalOptions="Start"
+                    Text="Kapat"
+                    FontSize="22"
+                    TextColor="{StaticResource PurpleBrownO}"
+                    VerticalOptions="FillAndExpand" />
+                <Label
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    FontSize="22"
+                    HorizontalOptions="StartAndExpand"
+                    HorizontalTextAlignment="Center"
+                    Text="Filtreleme"
+                    TextColor="{StaticResource PurpleBrownO}"
+                    VerticalOptions="FillAndExpand"
+                    VerticalTextAlignment="Center" />
+            </Grid>
+            <templates:HeaderLine2 Grid.Row="1" Grid.Column="0" RowSpacing="0"/>
+            <SearchBar
+                Grid.Row="2"
+                Grid.Column="0"
+                Placeholder="Arama"
+                HorizontalOptions="CenterAndExpand"
+                FontSize="Medium" />
+            <Grid
+                Grid.Row="3"
+                Grid.Column="0"
+                Margin="0,10,0,0"
+                HorizontalOptions="FillAndExpand"
+                RowSpacing="0"
+                VerticalOptions="FillAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Label
+                    Grid.Row="3"
+                    Grid.Column="0"
+                    Margin="20,10,0,10"
+                    FontSize="16"
+                    Text="Yemek Tabağı" />
+                <BoxView
+                    Grid.Row="4"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    Margin="0,10,0,0"
+                    HeightRequest="2"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand"
+                    Color="{StaticResource LineGray}" />
+                <Label
+                    Grid.Row="5"
+                    Grid.Column="0"
+                    Margin="20,10,0,10"
+                    FontSize="16"
+                    Text="Servis Tabağı" />
+                <BoxView
+                    Grid.Row="6"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    Margin="0,10,0,0"
+                    HeightRequest="2"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand"
+                    Color="{StaticResource LineGray}" />
+                <Label
+                    Grid.Row="7"
+                    Grid.Column="0"
+                    Margin="20,10,0,10"
+                    FontSize="16"
+                    Text="Pasta Tabağı" />
+                <BoxView
+                    Grid.Row="8"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    Margin="0,10,0,0"
+                    HeightRequest="2"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand"
+                    Color="{StaticResource LineGray}" />
+                <Label
+                    Grid.Row="9"
+                    Grid.Column="0"
+                    Margin="20,10,0,10"
+                    FontSize="16"
+                    Text="Kupa" />
+                <BoxView
+                    Grid.Row="10"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    Margin="0,10,0,0"
+                    HeightRequest="2"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand"
+                    Color="{StaticResource LineGray}" />
+                <Label
+                    Grid.Row="11"
+                    Grid.Column="0"
+                    Margin="20,10,0,10"
+                    FontSize="16"
+                    Text="Çay Fincanı" />
+                <BoxView
+                    Grid.Row="12"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    Margin="0,10,0,0"
+                    HeightRequest="2"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand"
+                    Color="{StaticResource LineGray}" />
+                <Label
+                    Grid.Row="13"
+                    Grid.Column="0"
+                    Margin="20,10,0,10"
+                    FontSize="16"
+                    Text="Kahve Fincanı" />
+                <BoxView
+                    Grid.Row="14"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    Margin="0,10,0,0"
+                    HeightRequest="2"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand"
+                    Color="{StaticResource LineGray}" />
+                <Label
+                    Grid.Row="15"
+                    Grid.Column="0"
+                    Margin="20,10,0,10"
+                    FontSize="16"
+                    Text="Kayık Tabak" />
+                <BoxView
+                    Grid.Row="16"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    Margin="0,10,0,0"
+                    HeightRequest="2"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand"
+                    Color="{StaticResource LineGray}" />
+                <Label
+                    Grid.Row="17"
+                    Grid.Column="0"
+                    Margin="20,10,0,10"
+                    FontSize="16"
+                    Text="Çorbalık" />
+                <BoxView
+                    Grid.Row="18"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    Margin="0,10,0,0"
+                    HeightRequest="2"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand"
+                    Color="{StaticResource LineGray}" />                
+            </Grid>
+            <Button
+                    Grid.Row="4"
+                    Grid.Column="0"
+                    Margin="0,0,0,0"
+                    BackgroundColor="{StaticResource PurpleBrownO}"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="EndAndExpand"                
+                    Text="EKLE"
+                    TextColor="White" />
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
